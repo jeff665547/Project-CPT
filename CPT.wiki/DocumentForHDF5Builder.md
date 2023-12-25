@@ -1,0 +1,100 @@
+## Building CEN File in HDF5 Format by using JSON Descriptor
+  
+This document describes about the HDF5 building format for CEN file.
+The format is defined in JSON format.
+Each node in hierarchy is repesented as an HDF5 object named by "<HDF5_OBJ_TAG>|<NAME>".
+Details are shown as follows:
+    
+    {
+        "G|<group_name>": {                 # name of HDF5 group
+         
+            "A|<attribute_name>": {         # name of HDF5 attribute
+                "DATATYPE":  <datatype>,    # data type specification
+                "DATA":      <data>         # data content repesented as scalar
+            },
+              
+            "D|<dataset_name>": {           # name of HDF5 dataset
+                "MEMBERS":   <members>,     # the member names for each tuple element
+                "DATASPACE": <dataspace>,   # memory layout, specified as an array of unsigned integers
+                "DATATYPE":  <datatype>,    # data type specification
+                "DATA":      <data>         # data content repesented in 0-based representation and row-major order
+            },
+              
+            "I|<image_name>": {             # title of an image
+                "PATH":  <path-to-image>    # the path to the image.
+            }
+        }
+    }
+  
+  * The names of group, dataset and image are a part of HDF5 location.
+    They have to be unique on the same level of hierarchy.
+  
+  * HDF5 tag:
+      
+    * (G)roup
+    * (D)ataset
+    * (A)ttribute
+    * (I)mage
+  
+  * The data space is specified as an array of dimensions,
+    please refer to the example in next section.
+  
+  * The data type can be specified as
+
+|                 |                           |
+|:---------------:|:-------------------------:|
+| **int8_t**      | 8-bit integer             |
+| **int16_t**     | 16-bit integer            |
+| **int32_t**     | 32-bit integer            |
+| **int64_t**     | 64-bit integer            |
+| **uint8_t**     | 8-bit unsigned integer    |
+| **uint16_t**    | 16-bit unsigned integer   |
+| **uint32_t**    | 32-bit unsigned integer   |
+| **uint64_t**    | 64-bit unsigned integer   |
+| **float**       | 32-bit float point number |
+| **double**      | 64-bit float point number |
+| **std::string** | string of variable-length |
+      
+  * The supported image format are listed below
+      
+      * Windows bitmap (bmp)
+      * Portable image formats (pbm, pgm, ppm)
+      * Sun raster (sr, ras)
+      * JPEG (jpeg, jpg, jpe)
+      * TIFF files (tiff, tif)
+      * Portable network graphics (png)
+
+
+[ Example ]
+
+    {
+        "A|attribute1": {                                            # create a string as an attribute under root
+            "DATATYPE" : "std::string",
+            "DATA"     : "abcd"
+        },
+        "G|group1": {                                                # create a group named group1
+            "A|attribute11": {                                       # create a string as an attribute under group1
+                "DATATYPE" : "std::string",
+                "DATA"     : "efgh"
+            },
+            "D|dataset11": {
+                "MEMBERS"  : ["name"       , "label", "value"],      # create a dataset with a set of name-label-value tuples
+                "DATATYPE" : ["std::string", int32_t, "float"],      # these types are std::string, int32_t, and float respectively
+                "DATASPACE": [3, 2],                                 # dimensions = 3 x 2
+                "DATA"     : [
+                    [ "a", 0, 0.1 ],
+                    [ "b", 1, 0.2 ],
+                    [ "c", 2, 0.3 ],
+                    [ "d", 3, 0.4 ],
+                    [ "e", 4, 0.5 ],
+                    [ "f", 5, 0.6 ]
+                ]
+            },
+            "G|group11": {                                           # create a group11 under group1     
+                "A|attribute111": {                                  # create an attribute with a 64-bit float point number under group11
+                    "DATATYPE" : "double",
+                    "DATA"     : 3.14159
+                }
+            }
+        }
+    }
