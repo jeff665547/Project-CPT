@@ -1,0 +1,337 @@
+{
+    "A|magic": {
+        "DATATYPE": "uint8_t",
+        "DATA": 67
+    },
+    "A|version": {
+        "DATATYPE": "uint8_t",
+        "DATA": 1
+    },
+    "A|status": {
+        "DATATYPE": "std::string",
+        "DATA": "empty"
+    },
+    "G|array": {
+        "A|date": {
+            "DATATYPE": "std::string",
+            "DATA": "YYYY-MM-DD HH:MM:SS"
+        },
+        "A|type": {
+            "DATATYPE": "std::string",
+            "DATA": "centrillion-gene-chip"
+        },
+        "A|barcode": {
+            "DATATYPE": "std::string",
+            "DATA": "abcde-0123456789"
+        },
+        "A|feature-columns": {
+            "DATATYPE": "uint16_t",
+            "DATA": 8
+        },
+        "A|feature-rows": {
+            "DATATYPE": "uint16_t",
+            "DATA": 8
+        },
+        "A|feature-height": {
+            "DATATYPE": "uint16_t",
+            "DATA": 5
+        },
+        "A|feature-width": {
+            "DATATYPE": "uint16_t",
+            "DATA": 5
+        },
+        "G|channel-0": {
+            "D|intensity": {
+                "MEMBERS"  : ["intensity"],
+                "DATATYPE" : ["float"],
+                "DATASPACE": [64],
+                "DATA": [
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ]
+                ]
+            },
+            "D|stddev": {
+                "MEMBERS"  : ["stddev"],
+                "DATATYPE" : ["float"],
+                "DATASPACE": [64],
+                "DATA": [
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ]
+                ]
+            },
+            "D|pixel": {
+                "MEMBERS"  : ["pixel"],
+                "DATATYPE" : ["int16_t"],
+                "DATASPACE": [64],
+                "DATA": [
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ]
+                ]
+            },
+            "D|mask": {
+                "MEMBERS"  : ["x"      , "y"      ],
+                "DATATYPE" : ["int16_t", "int16_t"],
+                "DATASPACE": [1],
+                "DATA": [
+                    [0, 0]
+                ]
+            },
+            "D|outlier": {
+                "MEMBERS"  : ["x"      , "y"      ],
+                "DATATYPE" : ["int16_t", "int16_t"],
+                "DATASPACE": [5],
+                "DATA": [
+                    [1, 1],
+                    [2, 2],
+                    [3, 3],
+                    [4, 4],
+                    [5, 5]
+                ]
+            }
+        },
+        "G|channel-1": {
+            "D|intensity": {
+                "MEMBERS"  : ["intensity"],
+                "DATATYPE" : ["float"],
+                "DATASPACE": [64],
+                "DATA": [
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ],
+                    [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ], [ 0 ]
+                ]
+            },
+            "D|stddev": {
+                "MEMBERS"  : ["stddev"],
+                "DATATYPE" : ["float"],
+                "DATASPACE": [64],
+                "DATA": [
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ],
+                    [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ]
+                ]
+            },
+            "D|pixel": {
+                "MEMBERS"  : ["pixel"],
+                "DATATYPE" : ["int16_t"],
+                "DATASPACE": [64],
+                "DATA": [
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ],
+                    [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ], [ 9 ]
+                ]
+            },
+            "D|mask": {
+                "MEMBERS"  : ["x"      , "y"      ],
+                "DATATYPE" : ["int16_t", "int16_t"],
+                "DATASPACE": [1],
+                "DATA": [
+                    [0, 0]
+                ]
+            },
+            "D|outlier": {
+                "MEMBERS"  : ["x"      , "y"      ],
+                "DATATYPE" : ["int16_t", "int16_t"],
+                "DATASPACE": [5],
+                "DATA": [
+                    [1, 1],
+                    [2, 2],
+                    [3, 3],
+                    [4, 4],
+                    [5, 5]
+                ]
+            }
+        }
+    },
+    "G|image-processing": {
+        "G|algorithm": {
+            "A|name": {
+                "DATATYPE": "std::string",
+                "DATA": "algorithm-name"
+            },
+            "A|version": {
+                "DATATYPE": "std::string",
+                "DATA": "algorithm-version"
+            }
+        },
+        "G|channel-0": {
+            "I|image": {
+                "PATH": "/path/to/image"
+            }
+        },
+        "G|channel-1": {
+            "I|image": {
+                "PATH": "/path/to/image"
+            }
+        }
+    },
+    "G|scanner": {
+        "A|date": {
+            "DATATYPE": "std::string",
+            "DATA": "YYYY-MM-DD HH:MM:SS"
+        },
+        "A|type": {
+            "DATATYPE": "std::string",
+            "DATA": "example"
+        },
+        "G|channel-0": {
+            "A|name": {
+                "DATATYPE": "std::string",
+                "DATA": "CG"
+            },
+            "A|wave-length": {
+                "DATATYPE": "uint32_t",
+                "DATA": 531
+            },
+            "A|exposure-time-ms": {
+                "DATATYPE": "float",
+                "DATA": 200.0
+            },
+            "I|image": {
+                "PATH": "/path/to/image"
+            }
+        },
+        "G|channel-1": {
+            "A|name": {
+                "DATATYPE": "std::string",
+                "DATA": "AT"
+            },
+            "A|wave-length": {
+                "DATATYPE": "uint32_t",
+                "DATA": 609
+            },
+            "A|exposure-time-ms": {
+                "DATATYPE": "float",
+                "DATA": 200.0
+            },
+            "I|image": {
+                "PATH": "/path/to/image"
+            }
+        }
+    },
+    "G|protocol": {
+        "G|amplification": {
+        },
+        "G|fragmentation": {
+            "I|image": {
+                "PATH": "/path/to/image"
+            }
+        },
+        "G|hybridization": {
+            "A|date": {
+                "DATATYPE": "std::string",
+                "DATA": "YYYY-MM-DD HH:MM:SS"
+            },
+            "A|start-time": {
+                "DATATYPE": "std::string",
+                "DATA": "YYYY-MM-DD HH:MM:SS"
+            },
+            "A|stop-time": {
+                "DATATYPE": "std::string",
+                "DATA": "YYYY-MM-DD HH:MM:SS"
+            },
+            "A|set-temperature": {
+                "DATATYPE": "float",
+                "DATA": 36.0
+            },
+            "A|max-temperature": {
+                "DATATYPE": "float",
+                "DATA": 36.0
+            },
+            "A|min-temperature": {
+                "DATATYPE": "float",
+                "DATA": 36.0
+            },
+            "A|concentration-of-sodium": {
+                "DATATYPE": "float",
+                "DATA": 1.0
+            },
+            "A|concentration-of-magnesium": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|concentration-of-dna": {
+                "DATATYPE": "float",
+                "DATA": 100.0
+            }
+        },
+        "G|fluidics": {
+            "A|date": {
+                "DATATYPE": "std::string",
+                "DATA": "YYYY-MM-DD HH:MM:SS"
+            },
+            "A|type": {
+                "DATATYPE": "std::string",
+                "DATA": "device"
+            },
+            "A|duration": {
+                "DATATYPE": "std::string",
+                "DATA": "hh:mm:ss"
+            },
+            "A|wash-cycle": {
+                "DATATYPE": "uint32_t",
+                "DATA": 1
+            },
+            "A|wash-set-temperature": {
+                "DATATYPE": "float",
+                "DATA": 36.0
+            },
+            "A|wash-max-temperature": {
+                "DATATYPE": "float",
+                "DATA": 36.0
+            },
+            "A|wash-min-temperature": {
+                "DATATYPE": "float",
+                "DATA": 36.0
+            },
+            "A|water-wash-set-temperature": {
+                "DATATYPE": "float",
+                "DATA": 36.0
+            },
+            "A|water-wash-max-temperature": {
+                "DATATYPE": "float",
+                "DATA": 36.0
+            },
+            "A|water-wash-min-temperature": {
+                "DATATYPE": "float",
+                "DATA": 36.0
+            }
+        },
+        "G|user-defined-parameters": {
+        }
+    },
+    "G|legacy": {
+    }
+}

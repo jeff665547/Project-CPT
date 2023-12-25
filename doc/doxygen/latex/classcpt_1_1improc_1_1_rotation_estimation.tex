@@ -1,0 +1,77 @@
+\hypertarget{classcpt_1_1improc_1_1_rotation_estimation}{\subsection{cpt\-:\-:improc\-:\-:Rotation\-Estimation$<$ F\-L\-O\-A\-T $>$ Class Template Reference}
+\label{classcpt_1_1improc_1_1_rotation_estimation}\index{cpt\-::improc\-::\-Rotation\-Estimation$<$ F\-L\-O\-A\-T $>$@{cpt\-::improc\-::\-Rotation\-Estimation$<$ F\-L\-O\-A\-T $>$}}
+}
+
+
+Estimate the rotation angle of image need to be corrected.  
+
+
+
+
+{\ttfamily \#include $<$rotation\-\_\-estimation.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \hyperlink{classcpt_1_1improc_1_1_rotation_estimation_ad90f0e3d503faf80c73bd671429af006}{operator()} (cv\-::\-Mat \&in\-\_\-src, const bool \&has\-\_\-grid\-\_\-img, cv\-::\-Mat \&grid\-\_\-img, const F\-L\-O\-A\-T \&min\-\_\-theta, const F\-L\-O\-A\-T \&max\-\_\-theta, const F\-L\-O\-A\-T \&steps, const int16\-\_\-t \&v\-\_\-edges, const int16\-\_\-t \&v\-\_\-hough, bool verbose=true)
+\begin{DoxyCompactList}\small\item\em Estimate the rotation angle of image need to be corrected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\subsubsection*{template$<$class F\-L\-O\-A\-T$>$class cpt\-::improc\-::\-Rotation\-Estimation$<$ F\-L\-O\-A\-T $>$}
+
+Estimate the rotation angle of image need to be corrected. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em F\-L\-O\-A\-T} & The float point type used\\
+\hline
+\end{DoxyTemplParams}
+The detail information can see here \hyperlink{improc_image_rotation}{Image Rotation} 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classcpt_1_1improc_1_1_rotation_estimation_ad90f0e3d503faf80c73bd671429af006}{\index{cpt\-::improc\-::\-Rotation\-Estimation@{cpt\-::improc\-::\-Rotation\-Estimation}!operator()@{operator()}}
+\index{operator()@{operator()}!cpt::improc::RotationEstimation@{cpt\-::improc\-::\-Rotation\-Estimation}}
+\paragraph[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class F\-L\-O\-A\-T $>$ auto {\bf cpt\-::improc\-::\-Rotation\-Estimation}$<$ F\-L\-O\-A\-T $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Mat \&}]{in\-\_\-src, }
+\item[{const bool \&}]{has\-\_\-grid\-\_\-img, }
+\item[{cv\-::\-Mat \&}]{grid\-\_\-img, }
+\item[{const F\-L\-O\-A\-T \&}]{min\-\_\-theta, }
+\item[{const F\-L\-O\-A\-T \&}]{max\-\_\-theta, }
+\item[{const F\-L\-O\-A\-T \&}]{steps, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-edges, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-hough, }
+\item[{bool}]{verbose = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcpt_1_1improc_1_1_rotation_estimation_ad90f0e3d503faf80c73bd671429af006}
+
+
+Estimate the rotation angle of image need to be corrected. 
+
+Estimate the rotation angle of image 
+\begin{DoxyParams}{Parameters}
+{\em in\-\_\-src} & Input image \\
+\hline
+{\em has\-\_\-grid\-\_\-img} & Flag for grid image provided or not \\
+\hline
+{\em grid\-\_\-img} & Grid image. Pass a empty matrix, if not provided. \\
+\hline
+{\em min\-\_\-theta} & The scan angles' lower bound. Given a angle range to be scan, as small as fast \\
+\hline
+{\em max\-\_\-theta} & The scan angles' upper bound. Given a angle range to be scanned, as small as faster. \\
+\hline
+{\em steps} & The scan angles' step interval as big as faster, but accuracy will lower. \\
+\hline
+{\em v\-\_\-edges} & Show the edge image. \\
+\hline
+{\em v\-\_\-hough} & Show the histogram \\
+\hline
+{\em verbose} & Set to false if no image show process are need ( will override other \char`\"{}v\-\_\-\char`\"{} prefix variable ), else set to true. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\-C\-P\-T/improc/\hyperlink{rotation__estimation_8hpp}{rotation\-\_\-estimation.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,277 @@
+{
+    "A|magic": {
+        "DATATYPE": "uint8_t",
+        "DATA": 67
+    },
+    "A|version": {
+        "DATATYPE": "uint8_t",
+        "DATA": 1
+    },
+    "A|status": {
+        "DATATYPE": "std::string",
+        "DATA": "uninitialized"
+    },
+    "G|array": {
+        "A|date": {
+            "DATATYPE": "std::string",
+            "DATA": ""
+        },
+        "A|type": {
+            "DATATYPE": "std::string",
+            "DATA": ""
+        },
+        "A|barcode": {
+            "DATATYPE": "std::string",
+            "DATA": ""
+        },
+        "A|feature-columns": {
+            "DATATYPE": "uint16_t",
+            "DATA": 0
+        },
+        "A|feature-rows": {
+            "DATATYPE": "uint16_t",
+            "DATA": 0
+        },
+        "A|feature-height": {
+            "DATATYPE": "uint16_t",
+            "DATA": 0
+        },
+        "A|feature-width": {
+            "DATATYPE": "uint16_t",
+            "DATA": 0
+        },
+        "G|channel-0": {
+            "D|intensity": {
+                "MEMBERS"  : ["intensity"],
+                "DATATYPE" : ["float"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            },
+            "D|stddev": {
+                "MEMBERS"  : ["stddev"],
+                "DATATYPE" : ["float"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            },
+            "D|pixel": {
+                "MEMBERS"  : ["pixel"],
+                "DATATYPE" : ["int16_t"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            },
+            "D|mask": {
+                "MEMBERS"  : ["x"      , "y"      ],
+                "DATATYPE" : ["int16_t", "int16_t"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            },
+            "D|outlier": {
+                "MEMBERS"  : ["x"      , "y"      ],
+                "DATATYPE" : ["int16_t", "int16_t"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            }
+        },
+        "G|channel-1": {
+            "D|intensity": {
+                "MEMBERS"  : ["intensity"],
+                "DATATYPE" : ["float"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            },
+            "D|stddev": {
+                "MEMBERS"  : ["stddev"],
+                "DATATYPE" : ["float"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            },
+            "D|pixel": {
+                "MEMBERS"  : ["pixel"],
+                "DATATYPE" : ["int16_t"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            },
+            "D|mask": {
+                "MEMBERS"  : ["x"      , "y"      ],
+                "DATATYPE" : ["int16_t", "int16_t"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            },
+            "D|outlier": {
+                "MEMBERS"  : ["x"      , "y"      ],
+                "DATATYPE" : ["int16_t", "int16_t"],
+                "DATASPACE": [0],
+                "DATA": [
+                ]
+            }
+        }
+    },
+    "G|image-processing": {
+        "G|algorithm": {
+            "A|name": {
+                "DATATYPE": "std::string",
+                "DATA": ""
+            },
+            "A|version": {
+                "DATATYPE": "std::string",
+                "DATA": ""
+            }
+        },
+        "G|channel-0": {
+            "I|image": {
+                "PATH": ""
+            }
+        },
+        "G|channel-1": {
+            "I|image": {
+                "PATH": ""
+            }
+        }
+    },
+    "G|scanner": {
+        "A|date": {
+            "DATATYPE": "std::string",
+            "DATA": ""
+        },
+        "A|type": {
+            "DATATYPE": "std::string",
+            "DATA": ""
+        },
+        "G|channel-0": {
+            "A|name": {
+                "DATATYPE": "std::string",
+                "DATA": ""
+            },
+            "A|wave-length": {
+                "DATATYPE": "uint32_t",
+                "DATA": 0
+            },
+            "A|exposure-time-ms": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "I|image": {
+                "PATH": ""
+            }
+        },
+        "G|channel-1": {
+            "A|name": {
+                "DATATYPE": "std::string",
+                "DATA": ""
+            },
+            "A|wave-length": {
+                "DATATYPE": "uint32_t",
+                "DATA": 0
+            },
+            "A|exposure-time-ms": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "I|image": {
+                "PATH": ""
+            }
+        }
+    },
+    "G|protocol": {
+        "G|amplification": {
+        },
+        "G|fragmentation": {
+            "I|image": {
+                "PATH": ""
+            }
+        },
+        "G|hybridization": {
+            "A|date": {
+                "DATATYPE": "std::string",
+                "DATA": ""
+            },
+            "A|start-time": {
+                "DATATYPE": "std::string",
+                "DATA": ""
+            },
+            "A|stop-time": {
+                "DATATYPE": "std::string",
+                "DATA": "Y"
+            },
+            "A|set-temperature": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|max-temperature": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|min-temperature": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|concentration-of-sodium": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|concentration-of-magnesium": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|concentration-of-dna": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            }
+        },
+        "G|fluidics": {
+            "A|date": {
+                "DATATYPE": "std::string",
+                "DATA": ""
+            },
+            "A|type": {
+                "DATATYPE": "std::string",
+                "DATA": ""
+            },
+            "A|duration": {
+                "DATATYPE": "std::string",
+                "DATA": ""
+            },
+            "A|wash-cycle": {
+                "DATATYPE": "uint32_t",
+                "DATA": 0
+            },
+            "A|wash-set-temperature": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|wash-max-temperature": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|wash-min-temperature": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|water-wash-set-temperature": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|water-wash-max-temperature": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            },
+            "A|water-wash-min-temperature": {
+                "DATATYPE": "float",
+                "DATA": 0.0
+            }
+        },
+        "G|user-defined-parameters": {
+        }
+    },
+    "G|legacy": {
+    }
+}

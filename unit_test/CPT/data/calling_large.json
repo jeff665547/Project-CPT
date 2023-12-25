@@ -1,0 +1,199 @@
+{
+    "output_dir":
+        "/home/alex/Centrillion/CPT/unit_test/data/results/calling_"
+    ,
+    "input": {
+        "chip_layout": [
+            "/home/alex/data/array/Axiom_GW_Hu-CHB_SNP_r2_1/Axiom_GW_Hu-CHB_SNP.r2.cdf"
+        ]
+      , "clustering_models": [
+            "/home/alex/Centrillion/CPT/unit_test/data/results/model.mdl"
+        ]
+      , "sample_files": [
+            "/home/alex/data/array/GSE78098/raw_data/GSM2066969_301-054_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066970_301-055_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066971_301-056_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066972_301-064_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066973_301-073_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066974_301-074_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066975_301-075_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066976_301-076_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066977_301-077_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066978_301-081_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066979_301-083_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066980_301-084_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066981_301-085_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066982_301-089_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066983_301-091_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066984_301-092_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066985_301-093_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066986_301-094_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066987_301-096_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066988_301-105_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066989_301-108_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066990_301-110_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066991_301-111_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066992_301-114_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066993_301-116_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066994_301-119_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066995_301-120_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066996_301-122_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066997_301-123_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066998_301-124_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066999_301-126_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067000_301-129_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067001_301-136_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067002_301-137_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067003_301-138_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067004_301-142_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067005_301-143_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067006_301-148_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067007_301-149_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067008_301-150_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067009_301-157_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067010_301-159_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067011_301-160_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067012_SS-401002_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067013_SS-401003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067014_SS-401004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067015_SS-401005_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067016_SS-401006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067017_SS-401008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067018_SS-401009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067019_SS-401010_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067020_SS-401011_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067021_SS-401012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067022_SS-401013_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067023_SS-401014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067024_SS-401015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067025_SS-401016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067026_SS-401017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067027_SS-401018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067028_SS-401019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067029_SS-401020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067030_SS-401021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067031_SS-401022_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067032_SS-401023_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067033_SS-401024_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067034_SS-401026_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067035_SS-401027_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067036_SS-401028_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067037_SS-401029_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067038_SS-401030_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067039_SS-401031_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067040_SS-401033_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067041_SS-401034_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067042_SS-401037_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067043_SS-401038_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067044_SS-401039_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067045_SS-401040_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067046_SS-401041_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067047_SS-401043_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067048_SS-401044_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067049_SS-401045_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067050_SS-401046_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067051_SS-401047_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067052_SS-401048_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067053_SS-401049_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067054_SS-401050_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067055_SS-401053_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067056_SS-401055_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067057_SS-401058_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067058_SS-401059_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067059_SS-401061_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067060_SS-401062_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067061_SS-401064_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067062_SS-401065_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067063_SS-401068_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067064_SS-401069_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067065_SS-401072_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067066_SS-401074_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067067_SS-401076_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2067068_SS-401077_CHB.CEL"
+        ]
+    },
+    "pipeline": [
+        {
+            "name": "Input:DataLoader",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Transform:QuantileNormalization",
+            "parameter": {
+                "scaling_factor" : 0
+            }
+        }
+      , {
+            "name": "Transform:AlleleSummarization",
+            "parameter": {
+                "probeset_list" : "/home/alex/Centrillion/CPT/unit_test/data/biallelic.ps"
+            }
+        }
+      , {
+            "name": "Infer:Genotyping<Birdseed>",
+            "parameter": {
+            }
+        }
+    ],
+    "pipeline_options": [
+        {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 100
+            }
+        }
+      , {
+            "name": "Transform:MedianPolish",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Train:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Train:GenoTyping<Birdseed>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:GenoTyping<Birdseed>",
+            "parameter": {
+                "maxiter": 200
+              , "convtol": 0.00001
+            }
+        }
+      , {
+            "name": "Report:MAPlot",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 300
+            }
+        }
+    ]
+}

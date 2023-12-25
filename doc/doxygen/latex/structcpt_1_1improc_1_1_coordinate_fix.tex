@@ -1,0 +1,69 @@
+\hypertarget{structcpt_1_1improc_1_1_coordinate_fix}{\subsection{cpt\-:\-:improc\-:\-:Coordinate\-Fix Struct Reference}
+\label{structcpt_1_1improc_1_1_coordinate_fix}\index{cpt\-::improc\-::\-Coordinate\-Fix@{cpt\-::improc\-::\-Coordinate\-Fix}}
+}
+
+
+The Regioin of Interest detection algorithm implementation.  
+
+
+
+
+{\ttfamily \#include $<$coordinate\-\_\-fix.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \hyperlink{structcpt_1_1improc_1_1_coordinate_fix_ac012f868880fba38b5416f7d28676dae}{operator()} (cv\-::\-Mat\-\_\-$<$ float $>$ \&mean, cv\-::\-Mat\-\_\-$<$ float $>$ \&stddev, cv\-::\-Mat\-\_\-$<$ uint16\-\_\-t $>$ \&pixels, cv\-::\-Mat\-\_\-$<$ float $>$ \&cv\-\_\-mat, std\-::vector$<$ cv\-::\-Mat\-\_\-$<$ int $>$$>$ \&detail\-\_\-raw\-\_\-values, cv\-::\-Rect \&roi, const std\-::string \&origin\-\_\-position, const char \&x\-\_\-axis\-\_\-direction) const 
+\begin{DoxyCompactList}\small\item\em Fix the coordinate system of image to fit the probe spec. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The Regioin of Interest detection algorithm implementation. 
+
+The detail information can see here improc\-\_\-coordinate\-\_\-fix 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{structcpt_1_1improc_1_1_coordinate_fix_ac012f868880fba38b5416f7d28676dae}{\index{cpt\-::improc\-::\-Coordinate\-Fix@{cpt\-::improc\-::\-Coordinate\-Fix}!operator()@{operator()}}
+\index{operator()@{operator()}!cpt::improc::CoordinateFix@{cpt\-::improc\-::\-Coordinate\-Fix}}
+\paragraph[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}auto cpt\-::improc\-::\-Coordinate\-Fix\-::operator() (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Mat\-\_\-$<$ float $>$ \&}]{mean, }
+\item[{cv\-::\-Mat\-\_\-$<$ float $>$ \&}]{stddev, }
+\item[{cv\-::\-Mat\-\_\-$<$ uint16\-\_\-t $>$ \&}]{pixels, }
+\item[{cv\-::\-Mat\-\_\-$<$ float $>$ \&}]{cv\-\_\-mat, }
+\item[{std\-::vector$<$ cv\-::\-Mat\-\_\-$<$ int $>$$>$ \&}]{detail\-\_\-raw\-\_\-values, }
+\item[{cv\-::\-Rect \&}]{roi, }
+\item[{const std\-::string \&}]{origin\-\_\-position, }
+\item[{const char \&}]{x\-\_\-axis\-\_\-direction}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcpt_1_1improc_1_1_coordinate_fix_ac012f868880fba38b5416f7d28676dae}
+
+
+Fix the coordinate system of image to fit the probe spec. 
+
+The coordinate system of image and probe spec may not matched, and this step read the user specified image coordinate to rotate or flip the image to match the probe spec, which means the position (0,0) of the probe grid should be the probe which's id is 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mean} & The mean value of intensities grid. \\
+\hline
+{\em stddev} & The standard deviation of the intensities grid. \\
+\hline
+{\em pixels} & The pixel of raw image \\
+\hline
+{\em cv\-\_\-mat} & The matrix of cv relate to every probe. ( can be empty matrix ) \\
+\hline
+{\em detail\-\_\-raw\-\_\-values} & The detail pixel values in every probe. ( can be empty vector ) \\
+\hline
+{\em roi} & The R\-O\-I result of R\-O\-I process. \\
+\hline
+{\em origin\-\_\-position} & The origion position of the image, can be \char`\"{}\-L\-T\char`\"{} (left top) or \char`\"{}\-L\-B\char`\"{} (left bottom). This is used to fix the coordinate system. \\
+\hline
+{\em x\-\_\-axis\-\_\-direction} & The origion position of the image, can be '\-\_\-' (horizontal) or '$\vert$' (vertical). This is used to fix the coordinate system. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\-C\-P\-T/improc/\hyperlink{coordinate__fix_8hpp}{coordinate\-\_\-fix.\-hpp}\end{DoxyCompactItemize}

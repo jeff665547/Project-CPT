@@ -1,0 +1,65 @@
+\hypertarget{structcpt_1_1improc_1_1_src_r_o_i_infer}{\subsection{cpt\-:\-:improc\-:\-:Src\-R\-O\-I\-Infer Struct Reference}
+\label{structcpt_1_1improc_1_1_src_r_o_i_infer}\index{cpt\-::improc\-::\-Src\-R\-O\-I\-Infer@{cpt\-::improc\-::\-Src\-R\-O\-I\-Infer}}
+}
+
+
+Apply the R\-O\-I result to pixel domain data (image, gridline, tiles etc.)  
+
+
+
+
+{\ttfamily \#include $<$src\-\_\-r\-\_\-o\-\_\-i\-\_\-infer.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \hyperlink{structcpt_1_1improc_1_1_src_r_o_i_infer_a07ad9c12bd9852a1e0d41bc639c20fd2}{operator()} (const cv\-::\-Rect \&roi, const cv\-::\-Mat \&src, std\-::vector$<$ uint32\-\_\-t $>$ \&gl\-\_\-x, std\-::vector$<$ uint32\-\_\-t $>$ \&gl\-\_\-y, std\-::vector$<$ cv\-::\-Rect $>$ \&tiles, const bool \&enable, const int16\-\_\-t \&v\-\_\-final, const bool \&verbose)
+\begin{DoxyCompactList}\small\item\em Apply the R\-O\-I result to pixel domain data (image, gridline, tiles etc.) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Apply the R\-O\-I result to pixel domain data (image, gridline, tiles etc.) 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{structcpt_1_1improc_1_1_src_r_o_i_infer_a07ad9c12bd9852a1e0d41bc639c20fd2}{\index{cpt\-::improc\-::\-Src\-R\-O\-I\-Infer@{cpt\-::improc\-::\-Src\-R\-O\-I\-Infer}!operator()@{operator()}}
+\index{operator()@{operator()}!cpt::improc::SrcROIInfer@{cpt\-::improc\-::\-Src\-R\-O\-I\-Infer}}
+\paragraph[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}auto cpt\-::improc\-::\-Src\-R\-O\-I\-Infer\-::operator() (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Rect \&}]{roi, }
+\item[{const cv\-::\-Mat \&}]{src, }
+\item[{std\-::vector$<$ uint32\-\_\-t $>$ \&}]{gl\-\_\-x, }
+\item[{std\-::vector$<$ uint32\-\_\-t $>$ \&}]{gl\-\_\-y, }
+\item[{std\-::vector$<$ cv\-::\-Rect $>$ \&}]{tiles, }
+\item[{const bool \&}]{enable, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-final, }
+\item[{const bool \&}]{verbose}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcpt_1_1improc_1_1_src_r_o_i_infer_a07ad9c12bd9852a1e0d41bc639c20fd2}
+
+
+Apply the R\-O\-I result to pixel domain data (image, gridline, tiles etc.) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em roi} & The R\-O\-I information from roi step \\
+\hline
+{\em src} & The raw image \\
+\hline
+{\em gl\-\_\-x} & x direction grid line \\
+\hline
+{\em gl\-\_\-y} & y direction grid line \\
+\hline
+{\em tiles} & The tile set \\
+\hline
+{\em enable} & Run this step or not \\
+\hline
+{\em v\-\_\-final} & Show grid result \\
+\hline
+{\em verbose} & Set to false if no image shown are needed ( will override other \char`\"{}v\-\_\-\char`\"{} prefix variable ), else set to true. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\-C\-P\-T/improc/\hyperlink{src__r__o__i__infer_8hpp}{src\-\_\-r\-\_\-o\-\_\-i\-\_\-infer.\-hpp}\end{DoxyCompactItemize}

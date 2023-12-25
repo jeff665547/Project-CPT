@@ -1,0 +1,220 @@
+{
+    "output_dir":
+        "/home/alex/Centrillion/CPT/unit_test/data/results/training_"
+    ,
+    "input": {
+        "chip_layout": [
+            "/home/alex/data/array/Axiom_GW_Hu-CHB_SNP_r2_1/Axiom_GW_Hu-CHB_SNP.r2.cdf"
+        ]
+      , "clustering_models": [
+            "/home/alex/Centrillion/CPT/unit_test/data/results/model.mdl"
+        ]
+      , "sample_files": [
+            "/home/alex/data/array/GSE78098/raw_data/GSM2066668_206-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066669_206-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066670_206-004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066671_206-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066672_206-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066673_206-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066674_206-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066675_206-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066676_206-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066677_206-023_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066678_206-028_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066679_206-029_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066680_206-030_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066681_206-032_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066682_206-033_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066683_206-034_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066684_206-038_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066685_206-040_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066686_206-041_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066687_206-043_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066688_206-044_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066689_206-045_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066690_206-048_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066691_206-049_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066692_206-054_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066693_206-056_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066694_211-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066695_211-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066696_211-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066697_211-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066698_211-010_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066699_211-012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066700_211-013_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066701_211-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066702_211-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066703_211-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066704_211-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066705_211-023_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066706_211-024_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066707_211-027_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066708_211-028_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066709_211-029_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066710_211-031_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066711_211-032_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066712_211-033_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066713_212-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066714_212-004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066715_212-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066716_212-008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066717_212-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066718_212-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066719_212-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066720_212-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066721_217-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066722_217-005_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066723_217-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066724_217-007_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066725_217-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066726_217-011_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066727_217-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066728_217-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066729_217-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066730_217-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066731_217-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066732_217-020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066733_217-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066734_217-022_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066735_217-025_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066736_217-029_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066737_306-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066738_306-002_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066739_306-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066740_306-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066741_306-007_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066742_306-010_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066743_306-011_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066744_306-012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066745_306-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066746_306-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066747_306-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066748_306-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066749_306-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066750_306-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066751_306-020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066752_306-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066753_306-024_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066754_401-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066755_401-007_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066756_401-008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066757_401-012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066758_401-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066759_401-020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066760_401-024_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066761_206-060_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066762_206-061_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066763_206-062_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066764_206-063_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066765_206-064_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066766_206-069_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066767_206-070_CHB.CEL"
+        ]
+    },
+    "pipeline": [
+        {
+            "name": "Input:DataLoader",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Train:TargetSketchEstimation",
+            "parameter": {
+                "scaling_factor" : 0
+            }
+        }
+      , {
+            "name": "Transform:QuantileNormalization",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Transform:AlleleSummarization",
+            "parameter": {
+                "probeset_list" : "/home/alex/Centrillion/CPT/unit_test/data/biallelic.ps"
+            }
+        }
+      , {
+            "name": "Train:Genotyping<Birdseed>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 300
+              , "convtol": 1e-5
+              , "trials" : 10
+              , "use_existing_model": false
+            }
+        }
+    ],
+    "pipeline_options": [
+        {
+            "name": "Train:TargetSketchEstimation",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 500
+            }
+        }
+      , {
+            "name": "Transform:ContrastCentersStretch",
+            "parameter": {
+                "k_scale" : 4
+            }
+        }
+      , {
+            "name": "Transform:MedianPolish",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Train:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Train:GenoTyping<Birdseed>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:GenoTyping<Birdseed>",
+            "parameter": {
+                "maxiter": 200
+              , "convtol": 0.00001
+            }
+        }
+      , {
+            "name": "Report:MAPlot",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 300
+            }
+        }
+    ]
+}

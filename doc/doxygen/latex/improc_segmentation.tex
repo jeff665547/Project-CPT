@@ -1,0 +1,15 @@
+Algorithm input \-:
+
+
+\begin{DoxyItemize}
+\item Image source
+\item Margin information
+\end{DoxyItemize}
+
+Workflow \-:
+
+This algorithm shrink down all cells of grid.
+
+The reason we do this fix is because the gridding process may not perfectly grid all cell, it may have some signal overflow to neighboring cell. This process sampling the center of cell to avoid the probe intensity cross talked.
+
+class reference \hyperlink{structcpt_1_1improc_1_1_segmentation}{cpt\-::improc\-::\-Segmentation} 

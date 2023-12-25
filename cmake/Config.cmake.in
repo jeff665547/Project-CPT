@@ -1,0 +1,49 @@
+@PACKAGE_INIT@
+
+# nucleona 
+find_package(Nucleona CONFIG REQUIRED)
+
+# chip image process 
+find_package(ChipImgProc CONFIG REQUIRED)
+
+# boost 
+find_package(Boost CONFIG COMPONENTS 
+    thread 
+    system 
+    filesystem 
+    # more boost module goes here
+    REQUIRED
+)
+
+# gtest
+if(@BUILD_TESTS@)
+    find_package(GTest CONFIG REQUIRED)
+endif()
+
+# CFU
+find_package(CFU CONFIG REQUIRED)
+
+# mlpack
+find_package(mlpack CONFIG REQUIRED)
+find_package(CLAPACK CONFIG REQUIRED)
+
+# Affy
+find_package(Affy CONFIG REQUIRED)
+
+# libsimdpp
+find_package(libsimdpp CONFIG REQUIRED)
+
+# OpenCV
+screw_get_bits(BITS)
+if(WIN32)
+    list(APPEND BUNDLE_RT_DIRS ${OpenCV_DIR}/x${BITS}/${OpenCV_RUNTIME}/bin)
+    list(APPEND BUNDLE_RT_DIRS ${OpenCV_DIR}/x${BITS}/${OpenCV_RUNTIME}/lib)
+else()
+endif()
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package (Threads REQUIRED)
+
+
+include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")
+check_required_components("@PROJECT_NAME@")

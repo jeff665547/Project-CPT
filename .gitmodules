@@ -1,0 +1,12 @@
+[submodule "lib/CCD"]
+	path = lib/CCD
+	url = ../../centrillion/CCD.git
+[submodule "lib/slam_quant_seq"]
+	path = lib/slam_quant_seq
+	url = ../../johnidfet/slam_quant_seq.git
+[submodule "lib/Affy"]
+	path = lib/Affy
+	url = ../../centrillion/Affy.git
+[submodule "lib/CFU"]
+	path = lib/CFU
+	url = ../../centrillion/CFU.git

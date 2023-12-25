@@ -1,0 +1,5 @@
+option( ENABLE_CPACK "Enables cpack rules" ON )
+option( ENABLE_LOG "Enable the CPT log system (spdlog)" OFF)
+option( BUILD_SHARED_LIBS "Build shared library" OFF )
+option( BUILD_TESTS "Build tests" OFF)
+option( INSTALL_DEPS "Install upstream dependencies" OFF)

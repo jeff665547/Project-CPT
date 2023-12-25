@@ -1,0 +1,10 @@
+\form#0:$ D = Asin( \omega t + \phi ) + C $
+\form#1:$ D = A sin( \omega t + \phi ) + C $
+\form#2:$ y = ax + b $
+\form#3:$ x = rcos(\theta) $
+\form#4:$ y = rsin(\theta) $
+\form#5:$ (r, \theta ) $
+\form#6:$ \theta $
+\form#7:$ v = (v - local background) / local background $
+\form#8:$ CV = standard deviation / mean $
+\form#9:$ CV = stddev / mean $

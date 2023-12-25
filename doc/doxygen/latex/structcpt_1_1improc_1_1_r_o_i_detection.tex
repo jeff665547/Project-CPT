@@ -1,0 +1,123 @@
+\hypertarget{structcpt_1_1improc_1_1_r_o_i_detection}{\subsection{cpt\-:\-:improc\-:\-:R\-O\-I\-Detection Struct Reference}
+\label{structcpt_1_1improc_1_1_r_o_i_detection}\index{cpt\-::improc\-::\-R\-O\-I\-Detection@{cpt\-::improc\-::\-R\-O\-I\-Detection}}
+}
+
+
+The Regioin of Interest detection algorithm implementation.  
+
+
+
+
+{\ttfamily \#include $<$r\-\_\-o\-\_\-i\-\_\-detection.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \hyperlink{structcpt_1_1improc_1_1_r_o_i_detection_a0d8b48ec6fc2e30969aee0559cb2d645}{operator()} (cv\-::\-Mat\-\_\-$<$ float $>$ \&mean, cv\-::\-Mat\-\_\-$<$ float $>$ \&stddev, cv\-::\-Mat\-\_\-$<$ uint16\-\_\-t $>$ \&pixels, cv\-::\-Mat\-\_\-$<$ float $>$ \&cv\-\_\-mat, std\-::vector$<$ cv\-::\-Mat\-\_\-$<$ int $>$$>$ \&detail\-\_\-raw\-\_\-values, bool \&roi\-\_\-qc\-\_\-fail, const uint32\-\_\-t \&x\-\_\-marker\-\_\-num, const uint32\-\_\-t \&y\-\_\-marker\-\_\-num, const uint32\-\_\-t \&marker\-\_\-x\-\_\-interval, const uint32\-\_\-t \&marker\-\_\-y\-\_\-interval, const std\-::vector$<$ cv\-::\-Mat\-\_\-$<$ uint8\-\_\-t $>$$>$ \&markers, const std\-::string \&img\-\_\-path, const bool \&enable, const int16\-\_\-t \&v\-\_\-mean\-\_\-trimmed, const int16\-\_\-t \&v\-\_\-mean\-\_\-binarized, const int16\-\_\-t \&v\-\_\-mean\-\_\-score, const int16\-\_\-t \&v\-\_\-layout\-\_\-score, const int16\-\_\-t \&v\-\_\-marker\-\_\-check, const int16\-\_\-t \&v\-\_\-mean, const int16\-\_\-t \&v\-\_\-std, const int16\-\_\-t \&v\-\_\-cv, const bool \&verbose=true)
+\begin{DoxyCompactList}\small\item\em The Regioin of Interest detection algorithm implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The Regioin of Interest detection algorithm implementation. 
+
+The detail information can see here \hyperlink{improc_r_o_i_detection}{Image Region of Interest Detection} 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{structcpt_1_1improc_1_1_r_o_i_detection_a0d8b48ec6fc2e30969aee0559cb2d645}{\index{cpt\-::improc\-::\-R\-O\-I\-Detection@{cpt\-::improc\-::\-R\-O\-I\-Detection}!operator()@{operator()}}
+\index{operator()@{operator()}!cpt::improc::ROIDetection@{cpt\-::improc\-::\-R\-O\-I\-Detection}}
+\paragraph[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}auto cpt\-::improc\-::\-R\-O\-I\-Detection\-::operator() (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Mat\-\_\-$<$ float $>$ \&}]{mean, }
+\item[{cv\-::\-Mat\-\_\-$<$ float $>$ \&}]{stddev, }
+\item[{cv\-::\-Mat\-\_\-$<$ uint16\-\_\-t $>$ \&}]{pixels, }
+\item[{cv\-::\-Mat\-\_\-$<$ float $>$ \&}]{cv\-\_\-mat, }
+\item[{std\-::vector$<$ cv\-::\-Mat\-\_\-$<$ int $>$$>$ \&}]{detail\-\_\-raw\-\_\-values, }
+\item[{bool \&}]{roi\-\_\-qc\-\_\-fail, }
+\item[{const uint32\-\_\-t \&}]{x\-\_\-marker\-\_\-num, }
+\item[{const uint32\-\_\-t \&}]{y\-\_\-marker\-\_\-num, }
+\item[{const uint32\-\_\-t \&}]{marker\-\_\-x\-\_\-interval, }
+\item[{const uint32\-\_\-t \&}]{marker\-\_\-y\-\_\-interval, }
+\item[{const std\-::vector$<$ cv\-::\-Mat\-\_\-$<$ uint8\-\_\-t $>$$>$ \&}]{markers, }
+\item[{const std\-::string \&}]{img\-\_\-path, }
+\item[{const bool \&}]{enable, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-mean\-\_\-trimmed, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-mean\-\_\-binarized, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-mean\-\_\-score, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-layout\-\_\-score, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-marker\-\_\-check, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-mean, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-std, }
+\item[{const int16\-\_\-t \&}]{v\-\_\-cv, }
+\item[{const bool \&}]{verbose = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcpt_1_1improc_1_1_r_o_i_detection_a0d8b48ec6fc2e30969aee0559cb2d645}
+
+
+The Regioin of Interest detection algorithm implementation. 
+
+Search the marker position by the given marker pattern \char`\"{}markers\char`\"{}, bound the region coverred by all markers, and extract the intensities. 
+\begin{DoxyParams}{Parameters}
+{\em mean} & The mean value of intensities grid. \\
+\hline
+{\em stddev} & The standard deviation of the intensities grid. \\
+\hline
+{\em pixels} & The pixel of raw image \\
+\hline
+{\em cv\-\_\-mat} & The matrix of cv relate to every probe. ( can be empty matrix ) \\
+\hline
+{\em detail\-\_\-raw\-\_\-values} & The detail pixel values in every probe. ( can be empty vector ) \\
+\hline
+{\em roi\-\_\-qc\-\_\-fail} & The output Q\-C state of R\-O\-I process. \\
+\hline
+{\em x\-\_\-marker\-\_\-num} & The horizontal direction of marker numbers of the image ( mean intensity grid ). \\
+\hline
+{\em y\-\_\-marker\-\_\-num} & The vertical direction of marker numbers of the image ( mean intensity grid ). \\
+\hline
+{\em marker\-\_\-x\-\_\-interval} & The grid distance ( cell numbers ) between markers of the horizontal direction. \\
+\hline
+{\em marker\-\_\-y\-\_\-interval} & The grid distance ( cell numbers ) between markers of the vertical direction. \\
+\hline
+{\em markers} & The candidate marker patterns. The algorithm will search the marker pattern from the first, and if the match quality is too low, then it will try to match the next candidate of the markers. \par
+ The marder pattern is specified by opencv matrix with uint8\-\_\-t integer element, for example \-: \par
+ . . . . . . . . . . \par
+ . . . . . . . . . . \par
+ . . X X . . X X . . \par
+ . . X X . . X X . . \par
+ . . . . X X . . . . \par
+ . . . . X X . . . . \par
+ . . X X . . X X . . \par
+ . . X X . . X X . . \par
+ . . . . . . . . . . \par
+ . . . . . . . . . . \par
+ The 'X' is 255. \par
+ The '.' is 0. \par
+ \\
+\hline
+{\em img\-\_\-path} & The filesystem path of raw image. \\
+\hline
+{\em enable} & False then this function will do nothing, otherwise work normally \\
+\hline
+{\em v\-\_\-mean\-\_\-trimmed} & Show trimmed mean image \\
+\hline
+{\em v\-\_\-mean\-\_\-binarized} & Show binarized mean image \\
+\hline
+{\em v\-\_\-mean\-\_\-score} & Show scored mean image \\
+\hline
+{\em v\-\_\-layout\-\_\-score} & Show layout score image \\
+\hline
+{\em v\-\_\-marker\-\_\-check} & Show marker check image \\
+\hline
+{\em v\-\_\-mean} & Show mean image \\
+\hline
+{\em v\-\_\-std} & Show standard deviation image \\
+\hline
+{\em v\-\_\-cv} & Show cv image \\
+\hline
+{\em verbose} & Set to false if no image show process are need ( will override other \char`\"{}v\-\_\-\char`\"{} prefix variable ), else set to true. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\-C\-P\-T/improc/\hyperlink{r__o__i__detection_8hpp}{r\-\_\-o\-\_\-i\-\_\-detection.\-hpp}\end{DoxyCompactItemize}

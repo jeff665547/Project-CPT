@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "GNU-General",
+            "includePath": [
+                "@CMAKE_SOURCE_DIR@/include",
+                "@CMAKE_SOURCE_DIR@/lib/CCD/include",
+                "@CMAKE_SOURCE_DIR@/lib/slam_quant_seq/include",
+                "@hunter_root_dir@/include",
+                "@hunter_root_dir@/include/affy"
+            ],
+            "defines": [
+                "ENABLE_HDF5",
+                "NO_VTK",
+                "NEW_DATA_POOL"
+            ],
+            "compilerPath": "@CMAKE_CXX_COMPILER@",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }  
+    ],
+    "version": 4
+}

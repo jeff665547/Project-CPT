@@ -1,0 +1,18 @@
+Algotithm main input\-:
+
+
+\begin{DoxyItemize}
+\item raw image
+\item image grid tiles
+\item new tile width and height after margin
+\end{DoxyItemize}
+
+Algorithm workflow\-:
+
+
+\begin{DoxyEnumerate}
+\item For each tiles, scan the pixels in tile by sliding windows with new tile width and height and compute the C\-V for every windows.
+\item Select the window which has minimun C\-V to be the new tile.
+\end{DoxyEnumerate}
+
+Note that, $ CV = stddev / mean $ 

@@ -1,0 +1,25 @@
+Algorithm input \-:
+
+
+\begin{DoxyItemize}
+\item Image source
+\item The upper bound of the grid line interval
+\end{DoxyItemize}
+
+Workflow \-:
+
+
+\begin{DoxyEnumerate}
+\item Fit sine wave with 2 direction ( x, y )
+\begin{DoxyEnumerate}
+\item Projection the image to 1 dimension with given direction
+\item Discrete fourier transform, extract the frequency.
+\item Linear regression fit the sine wave, extract the phase.\par
+ $ D = A sin( \omega t + \phi ) + C $
+\item Generate the grid line.
+\end{DoxyEnumerate}
+\item Collect the the grid line and create tiles of grid
+\item Return tiles and column, row number.
+\end{DoxyEnumerate}
+
+class reference \hyperlink{structcpt_1_1improc_1_1_gridding}{cpt\-::improc\-::\-Gridding} 

@@ -1,0 +1,9 @@
+include(BundleUtilities)
+file(READ "@CMAKE_BINARY_DIR@/_3rdParty/Hunter/install-root-dir" deps_root_dir)
+foreach(app ${exe_targets})
+    fixup_bundle(
+        "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/${app}"
+        ""
+        "${deps_root_dir}/bin;${deps_root_dir}/lib;${deps_root_dir}/lib64;@BUNDLE_RT_DIRS@"
+    )
+endforeach()

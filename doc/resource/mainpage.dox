@@ -1,0 +1,8 @@
+/** @mainpage 
+ *  This project provides library, test, and examples of several topic of microarray process include :
+ *      * @ref chip_image_process
+ *      * @ref genotyping
+ *      
+ * Each of these topic has a well description, API reference in this document.
+ * 
+ */

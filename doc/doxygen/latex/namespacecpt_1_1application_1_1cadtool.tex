@@ -1,0 +1,117 @@
+\hypertarget{namespacecpt_1_1application_1_1cadtool}{\subsection{cpt\-:\-:application\-:\-:cadtool Namespace Reference}
+\label{namespacecpt_1_1application_1_1cadtool}\index{cpt\-::application\-::cadtool@{cpt\-::application\-::cadtool}}
+}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacecpt_1_1application_1_1cadtool_ae5bf293a816e3b11cabec9d81f83993b}{json2cad\-\_\-file\-\_\-convert\-\_\-to} (const std\-::string \&input\-\_\-file\-\_\-path, const std\-::string \&output\-\_\-file\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Do the file conversion from J\-S\-O\-N to C\-A\-D. \end{DoxyCompactList}\item 
+void \hyperlink{namespacecpt_1_1application_1_1cadtool_a0500d549accbaf4424b87d1e3705b23f}{cad2json\-\_\-file\-\_\-convert\-\_\-to} (const std\-::string \&input\-\_\-file\-\_\-path, const std\-::string \&output\-\_\-file\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Define the format conversion method from C\-A\-D to J\-S\-O\-N. \end{DoxyCompactList}\item 
+void \hyperlink{namespacecpt_1_1application_1_1cadtool_a6d7a86b0fd989ce884ceb29d8e5a7023}{file\-\_\-convert\-\_\-to} (const std\-::string \&input\-\_\-file\-\_\-path, const std\-::string \&output\-\_\-file\-\_\-path, const std\-::string \&mode)
+\begin{DoxyCompactList}\small\item\em Do the file conversion from J\-S\-O\-N to C\-A\-D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespacecpt_1_1application_1_1cadtool_a0500d549accbaf4424b87d1e3705b23f}{\index{cpt\-::application\-::cadtool@{cpt\-::application\-::cadtool}!cad2json\-\_\-file\-\_\-convert\-\_\-to@{cad2json\-\_\-file\-\_\-convert\-\_\-to}}
+\index{cad2json\-\_\-file\-\_\-convert\-\_\-to@{cad2json\-\_\-file\-\_\-convert\-\_\-to}!cpt::application::cadtool@{cpt\-::application\-::cadtool}}
+\paragraph[{cad2json\-\_\-file\-\_\-convert\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}void cpt\-::application\-::cadtool\-::cad2json\-\_\-file\-\_\-convert\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{input\-\_\-file\-\_\-path, }
+\item[{const std\-::string \&}]{output\-\_\-file\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{namespacecpt_1_1application_1_1cadtool_a0500d549accbaf4424b87d1e3705b23f}
+
+
+Define the format conversion method from C\-A\-D to J\-S\-O\-N. 
+
+Given the input C\-A\-D file path and output J\-S\-O\-N file path. This function will convert the C\-A\-D file which is binary data to the human-\/readable J\-S\-O\-N file. Note that the J\-S\-O\-N file format will follow this schema ( \href{http://cgitlab.jhhlab.tw/centrillion/CPT/wikis/CAD-format-spec}{\tt http\-://cgitlab.\-jhhlab.\-tw/centrillion/\-C\-P\-T/wikis/\-C\-A\-D-\/format-\/spec} ).
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\-\_\-file\-\_\-path} & The input .cad file path \\
+\hline
+{\em output\-\_\-file\-\_\-path} & The output .json file path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+
+\begin{DoxyCodeInclude}
+    \hyperlink{namespacecpt_1_1application_1_1cadtool_a0500d549accbaf4424b87d1e3705b23f}{cpt::application::cadtool::cad2json\_file\_convert\_to}(
+       
+          example\_data\_dir + \textcolor{stringliteral}{"/json2cad\_test.cad"}
+        , example\_out\_dir +  \textcolor{stringliteral}{"/cad2json\_test.json"} 
+    );
+\end{DoxyCodeInclude}
+\hypertarget{namespacecpt_1_1application_1_1cadtool_a6d7a86b0fd989ce884ceb29d8e5a7023}{\index{cpt\-::application\-::cadtool@{cpt\-::application\-::cadtool}!file\-\_\-convert\-\_\-to@{file\-\_\-convert\-\_\-to}}
+\index{file\-\_\-convert\-\_\-to@{file\-\_\-convert\-\_\-to}!cpt::application::cadtool@{cpt\-::application\-::cadtool}}
+\paragraph[{file\-\_\-convert\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}void cpt\-::application\-::cadtool\-::file\-\_\-convert\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{input\-\_\-file\-\_\-path, }
+\item[{const std\-::string \&}]{output\-\_\-file\-\_\-path, }
+\item[{const std\-::string \&}]{mode}
+\end{DoxyParamCaption}
+)}}\label{namespacecpt_1_1application_1_1cadtool_a6d7a86b0fd989ce884ceb29d8e5a7023}
+
+
+Do the file conversion from J\-S\-O\-N to C\-A\-D. 
+
+This function defined a wrapper of 2 functions, json2cad\-\_\-file\-\_\-convert\-\_\-to and cad2json\-\_\-file\-\_\-convert\-\_\-to. It provides a string parameter to switch the user required conversion. 
+\begin{DoxyParams}{Parameters}
+{\em input\-\_\-file\-\_\-path} & The input (.json) file path \\
+\hline
+{\em output\-\_\-file\-\_\-path} & The output (.cad) file path \\
+\hline
+{\em mode} & The string used to swtich internal function, can be json2cad or cad2json \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+
+\begin{DoxyCodeInclude}
+    \hyperlink{namespacecpt_1_1application_1_1cadtool_a6d7a86b0fd989ce884ceb29d8e5a7023}{cpt::application::cadtool::file\_convert\_to}(
+          example\_data\_dir + \textcolor{stringliteral}{"/json2cad\_test.cad"}
+        , example\_out\_dir +  \textcolor{stringliteral}{"/cad2json\_test2.json"}
+        , \textcolor{stringliteral}{"cad2json"}
+    );
+    \hyperlink{namespacecpt_1_1application_1_1cadtool_a6d7a86b0fd989ce884ceb29d8e5a7023}{cpt::application::cadtool::file\_convert\_to}(
+          example\_out\_dir +  \textcolor{stringliteral}{"/cad2json\_test2.json"}
+        , example\_data\_dir + \textcolor{stringliteral}{"/json2cad\_test2.cad"}
+        , \textcolor{stringliteral}{"json2cad"}
+    );
+\end{DoxyCodeInclude}
+\hypertarget{namespacecpt_1_1application_1_1cadtool_ae5bf293a816e3b11cabec9d81f83993b}{\index{cpt\-::application\-::cadtool@{cpt\-::application\-::cadtool}!json2cad\-\_\-file\-\_\-convert\-\_\-to@{json2cad\-\_\-file\-\_\-convert\-\_\-to}}
+\index{json2cad\-\_\-file\-\_\-convert\-\_\-to@{json2cad\-\_\-file\-\_\-convert\-\_\-to}!cpt::application::cadtool@{cpt\-::application\-::cadtool}}
+\paragraph[{json2cad\-\_\-file\-\_\-convert\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}void cpt\-::application\-::cadtool\-::json2cad\-\_\-file\-\_\-convert\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{input\-\_\-file\-\_\-path, }
+\item[{const std\-::string \&}]{output\-\_\-file\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{namespacecpt_1_1application_1_1cadtool_ae5bf293a816e3b11cabec9d81f83993b}
+
+
+Do the file conversion from J\-S\-O\-N to C\-A\-D. 
+
+Given the input J\-S\-O\-N file path and output C\-A\-D file path, This function will convert the J\-S\-O\-N file which is the human-\/readable text file to the C\-A\-D binary data. Note that the J\-S\-O\-N file format should follow this schema ( \href{http://cgitlab.jhhlab.tw/centrillion/CPT/wikis/CAD-format-spec}{\tt http\-://cgitlab.\-jhhlab.\-tw/centrillion/\-C\-P\-T/wikis/\-C\-A\-D-\/format-\/spec} ).
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\-\_\-file\-\_\-path} & The input (.json) file path. \\
+\hline
+{\em output\-\_\-file\-\_\-path} & The output (.cad) file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+
+\begin{DoxyCodeInclude}
+    \hyperlink{namespacecpt_1_1application_1_1cadtool_ae5bf293a816e3b11cabec9d81f83993b}{cpt::application::cadtool::json2cad\_file\_convert\_to}(
+       
+          example\_data\_dir + \textcolor{stringliteral}{"/cad\_example.json"}
+        , example\_out\_dir + \textcolor{stringliteral}{"/json2cad\_test.cad"} 
+    );
+\end{DoxyCodeInclude}

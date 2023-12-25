@@ -1,0 +1,109 @@
+{
+    "output_dir":
+        "/home/alex/Centrillion/CPT/unit_test/data/results/calling_"
+    ,
+    "input": {
+        "chip_layout": [
+            "/home/alex/data/array/Axiom_GW_Hu-CHB_SNP_r2_1/Axiom_GW_Hu-CHB_SNP.r2.cdf"
+        ]
+      , "clustering_models": [
+            "/home/alex/Centrillion/CPT/unit_test/data/results/model.mdl"
+        ]
+      , "sample_files": [
+            "/home/alex/data/array/GSE78098/raw_data/GSM2066969_301-054_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066970_301-055_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066971_301-056_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066972_301-064_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066973_301-073_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066974_301-074_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066975_301-075_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066976_301-076_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066977_301-077_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066978_301-081_CHB.CEL"
+        ]
+    },
+    "pipeline": [
+        {
+            "name": "Input:DataLoader",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Transform:QuantileNormalization",
+            "parameter": {
+                "scaling_factor": 0
+            }
+        }
+      , {
+            "name": "Transform:AlleleSummarization",
+            "parameter": {
+                "probeset_list": "/home/alex/Centrillion/CPT/unit_test/data/probesetlist_small.ps"
+            }
+        }
+      , {
+            "name": "Infer:Genotyping<Birdseed>",
+            "parameter": {
+            }
+        }
+    ],
+    "pipeline_options": [
+        {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 100
+            }
+        }
+      , {
+            "name": "Transform:MedianPolish",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Train:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Train:GenoTyping<Birdseed>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:GenoTyping<Birdseed>",
+            "parameter": {
+                "maxiter": 200
+              , "convtol": 0.00001
+            }
+        }
+      , {
+            "name": "Report:MAPlot",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 300
+            }
+        }
+    ]
+}

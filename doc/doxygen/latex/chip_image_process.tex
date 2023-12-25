@@ -1,0 +1,210 @@
+To extract the probe intensities from the image. There are several issues of the image we need to resolve\-:
+\begin{DoxyEnumerate}
+\item The images are slanted
+\item Noise
+\item Grid recognition and segmentation
+\item A chip sample is captured into multiple images, which need to be stitched.
+\item The region of interest detection, remove the regions we don't need. etc.
+\end{DoxyEnumerate}
+
+To solve these issues, we develop a pipeline with following steps\-:
+\begin{DoxyItemize}
+\item \hyperlink{improc_image_rotation}{Image Rotation}
+\item \hyperlink{improc_gridding}{Image Gridding}
+\item \hyperlink{improc_segmentation}{Image Segmentation (Deprecated in 1.\-0.\-6-\/dev)}
+\item \hyperlink{improc_min_cv_auto_margin}{Image Min C\-V Segmentation}
+\item \hyperlink{improc_r_o_i_detection}{Image Region of Interest Detection}
+\item \hyperlink{improc_background_fix_sub_and_division01}{Image Background Fix}
+\item \hyperlink{improc_stitiching}{Image Stitching} 
+\end{DoxyItemize}\hypertarget{improc_image_rotation}{}\subsection{Image Rotation}\label{improc_image_rotation}
+Algorithm main input \-: \par
+
+\begin{DoxyItemize}
+\item image data ( matrix ).
+\item grid image ( optional ). \par
+
+\end{DoxyItemize}
+
+Algorithm workflow\-: \par
+
+\begin{DoxyEnumerate}
+\item Select a source for rotation estimation. If grid image is provided, then grid image will be selected.
+\item Strengthen the grid edge ( If no grid image provided )
+\begin{DoxyEnumerate}
+\item Blur the image
+\item Discrete Fourier transform
+\item Apply north filter ( shadow filter )
+\item Inverse discrete Fourier transform
+\item Apply south filter ( shadow filter )
+\item Apply north and south filter 3 times
+\item Normalize and binarize
+\end{DoxyEnumerate}
+\item Strengthen the grid edge ( If grid image provided )
+\begin{DoxyEnumerate}
+\item Normalize
+\item binarize
+\end{DoxyEnumerate}
+\item Image Hough transform
+\item Estimate the entropy of all theta in histogram, and select minimum angle
+\item Output the selected angle
+\end{DoxyEnumerate}
+
+detail desciption of Hough Transform can see here \hyperlink{hough_transform}{Hough transform}
+
+class reference \hyperlink{classcpt_1_1improc_1_1_rotation_estimation}{cpt\-::improc\-::\-Rotation\-Estimation} \hyperlink{structcpt_1_1improc_1_1_rotation_calibration}{cpt\-::improc\-::\-Rotation\-Calibration} \hypertarget{hough_transform}{}\subsubsection{Hough transform}\label{hough_transform}
+Hough transform is a generatic soultion for finding a line on image.
+
+A line in Cartiesian coordinate system can be descibed as this form \-:
+
+$ y = ax + b $
+
+In this form, some special case like the parameter ( a, b ) of a vertical line is infinite, which is hard to search and implement in program.
+
+Relatively, Polar coordinate system provieds a limited parameter space to describe a 2 dimension space, witch has good property for quantile searching and implementation.
+
+The formula of mapping Cartiesian coordinate system to Polar coordinate system is \-:
+
+$ x = rcos(\theta) $
+
+$ y = rsin(\theta) $
+
+By the formula, every point of Cartiesian coordinate system can be mapping to a curve on Polar coordinate system, and every line can be map to a point.
+
+Therefore, if there are multiple points in Cartiesian coordinate system can be connected into a line, then there will be multiple curves in Polar coordinate system overlapped at a point.
+
+By these description, a line searching algorithm can be described \-:
+
+
+\begin{DoxyEnumerate}
+\item Find the points' intensity higher than some threshold on the image
+\item Mapping the points to Polar coordinate system and accumulate every $ (r, \theta ) $'s count
+\item Return the max count point on Polar coordinate system.
+\end{DoxyEnumerate}
+
+The $ (r, \theta ) $ of the point is the line we need.
+
+For image rotation, the $ \theta $ is the rotation angle of image. \hypertarget{improc_gridding}{}\subsection{Image Gridding}\label{improc_gridding}
+Algorithm main input\-:
+
+
+\begin{DoxyItemize}
+\item Image source
+\item The upper bound of the grid line interval
+\end{DoxyItemize}
+
+Algorithm workflow\-:
+
+
+\begin{DoxyEnumerate}
+\item Fit sine wave with 2 directions ( x, y )
+\begin{DoxyEnumerate}
+\item Projection the image to 1 dimension with given direction
+\item Discrete Fourier transform, extract the frequency.
+\item Fit the sine wave by using linear regression and extract the phase.\par
+ $ D = A sin( \omega t + \phi ) + C $
+\item Generate the grid line.
+\end{DoxyEnumerate}
+\item Collect the grid lines and create tiles of grid
+\item Return tiles and column, row number.
+\end{DoxyEnumerate}
+
+class reference \hyperlink{structcpt_1_1improc_1_1_gridding}{cpt\-::improc\-::\-Gridding} \hypertarget{improc_segmentation}{}\subsection{Image Segmentation (Deprecated in 1.0.6-\/dev)}\label{improc_segmentation}
+Algorithm main input\-:
+
+
+\begin{DoxyItemize}
+\item Image source
+\item Margin information
+\end{DoxyItemize}
+
+Algorithm workflow\-:
+
+This algorithm shrinks down all cells of the grid.
+
+The reason we do this adjustment is because the gridding step may not perfectly segment the cells, it may have some signal overflow to the neighboring cells. This process sampling the center of the cell to avoid the probe intensity cross talked.
+
+class reference \hyperlink{structcpt_1_1improc_1_1_segmentation}{cpt\-::improc\-::\-Segmentation} \hypertarget{improc_min_cv_auto_margin}{}\subsection{Image Min C\-V Segmentation}\label{improc_min_cv_auto_margin}
+Algorithm main input\-:
+
+
+\begin{DoxyItemize}
+\item raw image
+\item image grid tiles
+\item new tile width and height after margin
+\end{DoxyItemize}
+
+Algorithm workflow\-:
+
+
+\begin{DoxyEnumerate}
+\item For each tiles, scan the pixels in tile by sliding windows with new tile width and height and compute the C\-V for every windows.
+\item Select the window which has minimun C\-V to be the new tile.
+\end{DoxyEnumerate}
+
+Note that, $ CV = stddev / mean $ \hypertarget{improc_r_o_i_detection}{}\subsection{Image Region of Interest Detection}\label{improc_r_o_i_detection}
+Algorithm main input \-:
+
+
+\begin{DoxyItemize}
+\item marker information
+\item intensities grid
+\item grid coordinate system
+\end{DoxyItemize}
+
+Algorithm workflow\-:
+
+
+\begin{DoxyEnumerate}
+\item Detect the marker by pattern match
+\item Bound the exact intensities region of the intensities grid by the marker pattern.\par
+ For example\-: \par
+ If the marker size is 10$\ast$10, the interval of marker 116 and there are 2$\ast$2 markers ver on intensities grid then the algorithm will try to bound a 126 $\ast$ 126 region on the grid. \par
+
+\item Fix the coordinate system, transform the grid to make sure the probe position ordered start from the left top. \par
+ To do this step is because that the image's probe coordinate system may not the same matrix, and the origin position of the matrix in Open\-C\-V library is starting from the left top and row major. To make sure coordinate and probe intensities is matched, this step is necessary.
+\item Extract the bounded intensities.
+\item Write back to the Intensities grid.
+
+class reference \hyperlink{structcpt_1_1improc_1_1_r_o_i_detection}{cpt\-::improc\-::\-R\-O\-I\-Detection} 
+\end{DoxyEnumerate}\hypertarget{improc_background_fix_sub_and_division01}{}\subsection{Image Background Fix}\label{improc_background_fix_sub_and_division01}
+Algorithm main input\-:
+
+
+\begin{DoxyItemize}
+\item probe grid ( grid after R\-O\-I )
+\item raw image ( image after R\-O\-I )
+\item marker information, include height, width, x and y direction interval
+\item the local segment number in x and y direction, which denote as sxn, syn.
+\item local background percentage, which denote as p
+\end{DoxyItemize}
+
+Algorithm workflow\-:
+
+
+\begin{DoxyEnumerate}
+\item Use marker information to filter the marker probe on probe grid.
+\item Split the raw image and probe grid into sxn $\ast$ syn segment. For example, let sxn=4, syn=4 and probe gird width=16, height=20, then the probe grid will be segment into 16 pieces and every pieces has width=4 and height=5.
+\item For each grid segment, select the lowest p percentage probes' intensities in probe grid, and compute the mean of these probe intensities, the result is the local background.
+\item For each pixel v of related segment in raw image, fix the pixel v by\-: $ v = (v - local background) / local background $
+\item The local background will then used by global background process.
+\begin{DoxyEnumerate}
+\item Compute the mean of all locol backgrounds, which represent the global mean.
+\item For each pixel v, multiply the global mean and the result is the final background fixed image of this algorithm. 
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}\hypertarget{improc_stitiching}{}\subsection{Image Stitching}\label{improc_stitiching}
+Algorithm main input\-:
+
+
+\begin{DoxyItemize}
+\item intensities grids
+\item every image's most left top marker's probe absolute position.
+
+For example \-:
+
+If the marker size is 10$\ast$10, the interval of marker 116 and there are 2$\ast$2 markers cover on intensities grid. \par
+ Then the image 0\-\_\-0 usually related to (2,2), 1\-\_\-0 related to (2,118).
+\end{DoxyItemize}
+
+Algorithm workflow\-:
+
+Stitch image by every images' marker position. In overlap regions, the stitching algorithm will select the cell has the minimum C\-V as the result of overlap region. 

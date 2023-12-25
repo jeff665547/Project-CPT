@@ -1,0 +1,55 @@
+\hypertarget{structcpt_1_1improc_1_1_min_c_v_auto_margin}{\subsection{cpt\-:\-:improc\-:\-:Min\-C\-V\-Auto\-Margin Struct Reference}
+\label{structcpt_1_1improc_1_1_min_c_v_auto_margin}\index{cpt\-::improc\-::\-Min\-C\-V\-Auto\-Margin@{cpt\-::improc\-::\-Min\-C\-V\-Auto\-Margin}}
+}
+
+
+Adjustment the pixel padding and margin size of grid by searching the minimum coefficient of variation section.  
+
+
+
+
+{\ttfamily \#include $<$min\-\_\-cv\-\_\-auto\-\_\-margin.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \hyperlink{structcpt_1_1improc_1_1_min_c_v_auto_margin_a171e12b5e79a117bc0a906606c43d7ea}{operator()} (const cv\-::\-Mat \&src, std\-::vector$<$ cv\-::\-Rect $>$ \&tiles, int32\-\_\-t windows\-\_\-width, int32\-\_\-t windows\-\_\-height)
+\begin{DoxyCompactList}\small\item\em Adjustment the pixel padding and margin size of grid by searching the minimum coefficient of variation section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Adjustment the pixel padding and margin size of grid by searching the minimum coefficient of variation section. 
+
+Search the minimum coefficient of variation section in the grid cell, use the selected section to represent the cell value. The section size is defined by input parameter. See \hyperlink{improc_min_cv_auto_margin}{Image Min C\-V Segmentation} for more detail. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{structcpt_1_1improc_1_1_min_c_v_auto_margin_a171e12b5e79a117bc0a906606c43d7ea}{\index{cpt\-::improc\-::\-Min\-C\-V\-Auto\-Margin@{cpt\-::improc\-::\-Min\-C\-V\-Auto\-Margin}!operator()@{operator()}}
+\index{operator()@{operator()}!cpt::improc::MinCVAutoMargin@{cpt\-::improc\-::\-Min\-C\-V\-Auto\-Margin}}
+\paragraph[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}auto cpt\-::improc\-::\-Min\-C\-V\-Auto\-Margin\-::operator() (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{src, }
+\item[{std\-::vector$<$ cv\-::\-Rect $>$ \&}]{tiles, }
+\item[{int32\-\_\-t}]{windows\-\_\-width, }
+\item[{int32\-\_\-t}]{windows\-\_\-height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcpt_1_1improc_1_1_min_c_v_auto_margin_a171e12b5e79a117bc0a906606c43d7ea}
+
+
+Adjustment the pixel padding and margin size of grid by searching the minimum coefficient of variation section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Image data. \\
+\hline
+{\em tiles} & The grid cell generate by gridding step. \\
+\hline
+{\em windows\-\_\-width} & The result section width in grid cell after auto margin. \\
+\hline
+{\em windows\-\_\-height} & The result section height in grid cell after auto margin. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\-C\-P\-T/improc/\hyperlink{min__cv__auto__margin_8hpp}{min\-\_\-cv\-\_\-auto\-\_\-margin.\-hpp}\end{DoxyCompactItemize}

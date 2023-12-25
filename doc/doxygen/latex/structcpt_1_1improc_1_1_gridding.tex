@@ -1,0 +1,63 @@
+\hypertarget{structcpt_1_1improc_1_1_gridding}{\subsection{cpt\-:\-:improc\-:\-:Gridding$<$ F\-L\-O\-A\-T $>$ Struct Template Reference}
+\label{structcpt_1_1improc_1_1_gridding}\index{cpt\-::improc\-::\-Gridding$<$ F\-L\-O\-A\-T $>$@{cpt\-::improc\-::\-Gridding$<$ F\-L\-O\-A\-T $>$}}
+}
+
+
+Recognize the grid border of the image.  
+
+
+
+
+{\ttfamily \#include $<$gridding.\-hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \hyperlink{structcpt_1_1improc_1_1_gridding_a1a2d0b5467474f48b1ae8fb3183cd59e}{operator()} (cv\-::\-Mat \&in\-\_\-src, double max\-\_\-intvl, int16\-\_\-t v\-\_\-final, const std\-::string \&img\-\_\-path, bool verbose=true)
+\begin{DoxyCompactList}\small\item\em Recognize the grid border of the image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\subsubsection*{template$<$class F\-L\-O\-A\-T$>$struct cpt\-::improc\-::\-Gridding$<$ F\-L\-O\-A\-T $>$}
+
+Recognize the grid border of the image. 
+
+Detail information can see here \hyperlink{improc_gridding}{Image Gridding} 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{structcpt_1_1improc_1_1_gridding_a1a2d0b5467474f48b1ae8fb3183cd59e}{\index{cpt\-::improc\-::\-Gridding@{cpt\-::improc\-::\-Gridding}!operator()@{operator()}}
+\index{operator()@{operator()}!cpt::improc::Gridding@{cpt\-::improc\-::\-Gridding}}
+\paragraph[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class F\-L\-O\-A\-T $>$ auto {\bf cpt\-::improc\-::\-Gridding}$<$ F\-L\-O\-A\-T $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{cv\-::\-Mat \&}]{in\-\_\-src, }
+\item[{double}]{max\-\_\-intvl, }
+\item[{int16\-\_\-t}]{v\-\_\-final, }
+\item[{const std\-::string \&}]{img\-\_\-path, }
+\item[{bool}]{verbose = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structcpt_1_1improc_1_1_gridding_a1a2d0b5467474f48b1ae8fb3183cd59e}
+
+
+Recognize the grid border of the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\-\_\-src} & Input image \\
+\hline
+{\em max\-\_\-intvl} & Max interval of grid line \\
+\hline
+{\em v\-\_\-final} & Show grid result \\
+\hline
+{\em img\-\_\-path} & The filesystem path of raw image. \\
+\hline
+{\em verbose} & Set to false if no image shown are needed ( will override other \char`\"{}v\-\_\-\char`\"{} prefix variable ), else set to true. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+grid rows, grid cols, grid tiles ( a rectangle set ) 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\-C\-P\-T/improc/\hyperlink{gridding_8hpp}{gridding.\-hpp}\end{DoxyCompactItemize}

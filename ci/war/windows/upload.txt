@@ -1,0 +1,3 @@
+open sftp://ci_bot:qsefthuk90@192.168.1.11:49024 -hostkey="ssh-ed25519 256 8f:89:98:2a:24:d0:1c:58:67:45:7b:27:9d:3e:c7:1f"
+put CPT_binary_win.7z
+exit

@@ -1,0 +1,50 @@
+\hypertarget{namespacecpt_1_1application_1_1cdf2cad}{\subsection{cpt\-:\-:application\-:\-:cdf2cad Namespace Reference}
+\label{namespacecpt_1_1application_1_1cdf2cad}\index{cpt\-::application\-::cdf2cad@{cpt\-::application\-::cdf2cad}}
+}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacecpt_1_1application_1_1cdf2cad_ac7aeee37a5727445397be7fa0f6475dd}{file\-\_\-convert\-\_\-to} (const std\-::string \&input, const std\-::string \&output, const std\-::string \&probe\-\_\-tab, const std\-::string \&annot\-\_\-csv)
+\begin{DoxyCompactList}\small\item\em Conversion C\-D\-F format to C\-A\-D format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespacecpt_1_1application_1_1cdf2cad_ac7aeee37a5727445397be7fa0f6475dd}{\index{cpt\-::application\-::cdf2cad@{cpt\-::application\-::cdf2cad}!file\-\_\-convert\-\_\-to@{file\-\_\-convert\-\_\-to}}
+\index{file\-\_\-convert\-\_\-to@{file\-\_\-convert\-\_\-to}!cpt::application::cdf2cad@{cpt\-::application\-::cdf2cad}}
+\paragraph[{file\-\_\-convert\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}void cpt\-::application\-::cdf2cad\-::file\-\_\-convert\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{input, }
+\item[{const std\-::string \&}]{output, }
+\item[{const std\-::string \&}]{probe\-\_\-tab, }
+\item[{const std\-::string \&}]{annot\-\_\-csv}
+\end{DoxyParamCaption}
+)}}\label{namespacecpt_1_1application_1_1cdf2cad_ac7aeee37a5727445397be7fa0f6475dd}
+
+
+Conversion C\-D\-F format to C\-A\-D format. 
+
+Given the input C\-D\-F, output C\-A\-D file path, probe table (.probe\-\_\-tab) and annotation file (.annot.\-csv), and the function will convert the C\-D\-F which is Affymetrix spec to C\-A\-D which is Centrillion spec. The Affymetrix file format description can be found at\-: \href{http://media.affymetrix.com/support/developer/powertools/changelog/FILE-FORMATS.html}{\tt http\-://media.\-affymetrix.\-com/support/developer/powertools/changelog/\-F\-I\-L\-E-\/\-F\-O\-R\-M\-A\-T\-S.\-html} Note that the C\-D\-F is Axiom platform spec.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input (.cdf) file path. \\
+\hline
+{\em output} & The output (.cad) file path. \\
+\hline
+{\em probe\-\_\-tab} & The probe table (.prob\-\_\-tab) file path. \\
+\hline
+{\em annot\-\_\-csv} & The annotation (.annot.\-csv) file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none
+\end{DoxyReturn}
+
+\begin{DoxyCodeInclude}
+    \hyperlink{namespacecpt_1_1application_1_1cdf2cad_ac7aeee37a5727445397be7fa0f6475dd}{cpt::application::cdf2cad::file\_convert\_to}(
+          example\_data\_dir + \textcolor{stringliteral}{"/example.cdf"}
+        , example\_out\_dir  + \textcolor{stringliteral}{"/cdf2cad\_test.cad"}
+        , example\_data\_dir + \textcolor{stringliteral}{"/example.probe\_tab"}
+        , example\_data\_dir + \textcolor{stringliteral}{"/example.annot.csv"}
+    );
+\end{DoxyCodeInclude}

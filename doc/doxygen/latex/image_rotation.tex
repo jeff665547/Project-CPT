@@ -1,0 +1,33 @@
+Main input \-: \par
+
+\begin{DoxyItemize}
+\item image data ( matrix ).
+\item grid image ( optional ). \par
+
+\end{DoxyItemize}
+
+Algorithm workflow \-: \par
+
+\begin{DoxyEnumerate}
+\item Select a source for rotation estimation. \par
+ If grid image is provided, then grid image will be selected.
+\item Strengthen the grid edge ( If no grid image provided )
+\begin{DoxyEnumerate}
+\item Blur the image
+\item Discrete fourier transform
+\item Apply north filter ( shadow filter )
+\item Inverse discrete fourier transform
+\item Apply south filter ( shadow filter )
+\item Apply north and south filter 3 times
+\item Normalize and binarize
+\end{DoxyEnumerate}
+\item Strengthen the grid edge ( If grid image provided )
+\begin{DoxyEnumerate}
+\item Normalize
+\item binarize
+\end{DoxyEnumerate}
+\item Image \hyperlink{hough_transform}{Hough transform}
+\item Estimate the entropy of all theta in histogram, and select mininum angle
+\item Output the selected angle \hyperlink{hough_transform}{Hough transform} 
+\end{DoxyEnumerate}\hypertarget{hough_transform}{}\subsection{Hough transform}\label{hough_transform}
+Q\-Q\-Q\-Q\-Q\-Q\-Q\-Q Q\-Q\-Q\-Q\-Q\-Q\-Q Q\-Q\-Q Q\-Q\-Q 

@@ -1,0 +1,25 @@
+Algotithm main input\-:
+
+
+\begin{DoxyItemize}
+\item probe grid ( grid after R\-O\-I )
+\item raw image ( image after R\-O\-I )
+\item marker information, include height, width, x and y direction interval
+\item the local segment number in x and y direction, which denote as sxn, syn.
+\item local background percentage, which denote as p
+\end{DoxyItemize}
+
+Algorithm workflow\-:
+
+
+\begin{DoxyEnumerate}
+\item Use marker information to filter the marker probe on probe grid.
+\item Split the raw image and probe grid into sxn $\ast$ syn segment. For example, let sxn=4, syn=4 and probe gird width=16, height=20, then the probe grid will be segment into 16 pieces and every pieces has width=4 and height=5.
+\item For each grid segment, select the lowest p percentage probes' intensities in probe grid, and compute the mean of these probe intensities, the result is the local background.
+\item For each pixel v of related segment in raw image, fix the pixel v by\-: $ v = (v - local background) / local background $
+\item The local background will then used by global background process.
+\begin{DoxyEnumerate}
+\item Compute the mean of all locol backgrounds, which represent the global mean.
+\item For each pixel v, multiply the global mean and the result is the final background fixed image of this algorithm. 
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}

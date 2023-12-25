@@ -1,0 +1,55 @@
+probeset_trainning.hpp:1:9: warning: #pragma once in main file
+ #pragma once
+         ^~~~
+In file included from /usr/include/armadillo:99:0,
+                 from /usr/local/include/mlpack/core/arma_extend/arma_extend.hpp:52,
+                 from /usr/local/include/mlpack/prereqs.hpp:78,
+                 from /usr/local/include/mlpack/core.hpp:207,
+                 from /home/john/CPT/include/CPT/engine/data_pool/dummy_allele_signals.hpp:3,
+                 from /home/john/CPT/include/CPT/engine/data_pool.hpp:8,
+                 from /home/john/CPT/include/CPT/engine/component.hpp:2,
+                 from /home/john/CPT/include/CPT/engine/components/named_component.hpp:2,
+                 from probeset_trainning.hpp:3:
+/usr/include/armadillo_bits/Mat_meat.hpp: In instantiation of 'arma::Mat<eT>::~Mat() 
+[with 
+    eT = boost::range_detail::transformed_range<
+          cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>
+        , const boost::range_detail::transformed_range<
+              cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>
+            , const boost::integer_range<long unsigned int> 
+        > 
+    >
+]':
+/usr/include/armadillo_bits/Col_bones.hpp:17:7:   required from 'auto cpt::algorithm::operator|(RNG&&, const cpt::algorithm::ToArmaVec&) [with RNG = std::vector<boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > >, std::allocator<boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > > > >]'
+probeset_trainning.hpp:484:31:   required from here
+/usr/include/armadillo_bits/Mat_meat.hpp:33:3: error: static assertion failed: error: incorrect or unsupported type
+   arma_type_check(( is_supported_elem_type<eT>::value == false ));
+   ^
+In file included from /usr/include/armadillo:547:0,
+                 from /usr/local/include/mlpack/core/arma_extend/arma_extend.hpp:52,
+                 from /usr/local/include/mlpack/prereqs.hpp:78,
+                 from /usr/local/include/mlpack/core.hpp:207,
+                 from /home/john/CPT/include/CPT/engine/data_pool/dummy_allele_signals.hpp:3,
+                 from /home/john/CPT/include/CPT/engine/data_pool.hpp:8,
+                 from /home/john/CPT/include/CPT/engine/component.hpp:2,
+                 from /home/john/CPT/include/CPT/engine/components/named_component.hpp:2,
+                 from probeset_trainning.hpp:3:
+/usr/include/armadillo_bits/Mat_meat.hpp: In instantiation of 'arma::Mat<eT>::Mat(const arma::arma_vec_indicator&, arma::uword, arma::uword, arma::uhword) [with eT = boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > >; arma::uword = long long unsigned int; arma::uhword = unsigned int]':
+/usr/include/armadillo_bits/Col_meat.hpp:42:50:   required from 'arma::Col<eT>::Col(arma::uword) [with eT = boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > >; arma::uword = long long unsigned int]'
+/home/john/CPT/include/CPT/algorithm/matrix_range.hpp:159:50:   required from 'auto cpt::algorithm::operator|(RNG&&, const cpt::algorithm::ToArmaVec&) [with RNG = std::vector<boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > >, std::allocator<boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > > > >]'
+probeset_trainning.hpp:484:31:   required from here
+/usr/include/armadillo_bits/Mat_meat.hpp:154:9: error: no matching function for call to 'boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > >::transformed_range()'
+   , mem()
+         ^
+In file included from /home/john/CPT/include/CPT/format/static_tsv_reader.hpp:9:0,
+                 from probeset_trainning.hpp:7:
+/usr/local/include/boost/range/adaptor/transformed.hpp:62:13: note: candidate: boost::range_detail::transformed_range<F, R>::transformed_range(boost::range_detail::transformed_range<F, R>::transform_fn_type, R&) [with F = cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>; R = const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> >; boost::range_detail::transformed_range<F, R>::transform_fn_type = boost::range_detail::default_constructible_unary_fn_wrapper<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const arma::Col<double>&>]
+             transformed_range(transform_fn_type f, R& r)
+             ^~~~~~~~~~~~~~~~~
+/usr/local/include/boost/range/adaptor/transformed.hpp:62:13: note:   candidate expects 2 arguments, 0 provided
+/usr/local/include/boost/range/adaptor/transformed.hpp:40:16: note: candidate: boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > >::transformed_range(const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > >&)
+         struct transformed_range :
+                ^~~~~~~~~~~~~~~~~
+/usr/local/include/boost/range/adaptor/transformed.hpp:40:16: note:   candidate expects 1 argument, 0 provided
+/usr/local/include/boost/range/adaptor/transformed.hpp:40:16: note: candidate: boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > >::transformed_range(boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::GMMMeanTag::operator()(T&&) const [with T = mlpack::gmm::GMM&]::<lambda(auto:29&&)>, const boost::range_detail::transformed_range<cpt::algorithm::g_m_m_util::components(T&&) [with T = mlpack::gmm::GMM&; CH = void]::<lambda(auto:28&&)>, const boost::integer_range<long unsigned int> > >&&)
+/usr/local/include/boost/range/adaptor/transformed.hpp:40:16: note:   candidate expects 1 argument, 0 provided

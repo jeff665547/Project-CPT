@@ -1,0 +1,34 @@
+/**
+ *  @page hough_transform Hough transform
+ *
+ *  Hough transform is a generatic soultion for finding a line on image.
+ *
+ *  A line in Cartiesian coordinate system can be descibed as this form : 
+ *
+ *  \f$ y = ax + b \f$ 
+ *
+ *  In this form, some special case like the parameter ( a, b ) of a vertical line is infinite, which is hard to search and implement in program.
+ *
+ *  Relatively, Polar coordinate system provieds a limited parameter space to describe a 2 dimension space, witch has good property for quantile searching and implementation.
+ *
+ *
+ *  The formula of mapping Cartiesian coordinate system to Polar coordinate system is : 
+ *  
+ *  \f$ x = rcos(\theta) \f$
+ *
+ *  \f$ y = rsin(\theta) \f$
+ *
+ *  By the formula, every point of Cartiesian coordinate system can be mapping to a curve on Polar coordinate system, and every line can be map to a point.
+ *
+ *  Therefore, if there are multiple points in Cartiesian coordinate system can be connected into a line, then there will be multiple curves in Polar coordinate system overlapped at a point.
+ *
+ *  By these description, a line searching algorithm can be described :
+ *  
+ *  1. Find the points' intensity higher than some threshold on the image
+ *  2. Mapping the points to Polar coordinate system and accumulate every \f$ (r, \theta ) \f$'s count
+ *  3. Return the max count point on Polar coordinate system.
+ *
+ *  The \f$ (r, \theta ) \f$ of the point is the line we need.
+ *
+ *  For image rotation, the \f$ \theta \f$ is the rotation angle of image.
+ */

@@ -1,0 +1,421 @@
+{
+    "output_dir":
+        "/home/alex/Centrillion/CPT/unit_test/data/results/training_"
+    ,
+    "input": {
+        "chip_layout": [
+            "/home/alex/data/array/Axiom_GW_Hu-CHB_SNP_r2_1/Axiom_GW_Hu-CHB_SNP.r2.cdf"
+        ]
+      , "clustering_models": [
+            "/home/alex/Centrillion/CPT/unit_test/data/results/model.mdl"
+        ]
+      , "sample_files": [
+            "/home/alex/data/array/GSE78098/raw_data/GSM2066668_206-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066669_206-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066670_206-004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066671_206-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066672_206-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066673_206-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066674_206-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066675_206-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066676_206-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066677_206-023_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066678_206-028_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066679_206-029_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066680_206-030_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066681_206-032_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066682_206-033_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066683_206-034_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066684_206-038_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066685_206-040_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066686_206-041_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066687_206-043_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066688_206-044_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066689_206-045_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066690_206-048_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066691_206-049_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066692_206-054_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066693_206-056_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066694_211-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066695_211-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066696_211-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066697_211-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066698_211-010_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066699_211-012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066700_211-013_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066701_211-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066702_211-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066703_211-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066704_211-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066705_211-023_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066706_211-024_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066707_211-027_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066708_211-028_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066709_211-029_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066710_211-031_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066711_211-032_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066712_211-033_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066713_212-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066714_212-004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066715_212-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066716_212-008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066717_212-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066718_212-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066719_212-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066720_212-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066721_217-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066722_217-005_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066723_217-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066724_217-007_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066725_217-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066726_217-011_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066727_217-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066728_217-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066729_217-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066730_217-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066731_217-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066732_217-020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066733_217-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066734_217-022_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066735_217-025_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066736_217-029_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066737_306-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066738_306-002_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066739_306-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066740_306-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066741_306-007_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066742_306-010_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066743_306-011_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066744_306-012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066745_306-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066746_306-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066747_306-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066748_306-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066749_306-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066750_306-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066751_306-020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066752_306-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066753_306-024_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066754_401-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066755_401-007_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066756_401-008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066757_401-012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066758_401-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066759_401-020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066760_401-024_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066761_206-060_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066762_206-061_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066763_206-062_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066764_206-063_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066765_206-064_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066766_206-069_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066767_206-070_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066768_301-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066769_301-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066770_301-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066771_301-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066772_301-020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066773_301-023_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066774_301-025_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066775_301-026_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066776_301-027_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066777_301-028_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066778_301-029_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066779_301-031_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066780_301-033_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066781_301-034_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066782_301-036_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066783_301-037_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066784_301-040_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066785_301-043_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066786_301-045_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066787_301-046_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066788_301-047_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066789_301-048_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066790_301-052_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066791_301-057_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066792_301-058_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066793_301-059_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066794_301-060_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066795_301-065_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066796_301-066_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066797_301-068_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066798_301-069_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066799_301-070_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066800_301-071_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066801_301-072_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066802_301-078_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066803_301-079_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066804_301-080_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066805_301-082_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066806_301-086_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066807_301-087_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066808_301-088_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066809_301-090_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066810_301-095_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066811_301-097_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066812_301-098_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066813_301-099_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066814_301-100_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066815_301-101_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066816_301-102_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066817_301-103_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066818_301-104_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066819_301-106_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066820_301-109_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066821_301-112_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066822_301-113_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066823_301-115_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066824_301-117_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066825_301-118_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066826_301-121_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066827_301-125_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066828_301-127_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066829_301-128_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066830_301-130_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066831_301-131_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066832_301-132_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066833_301-133_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066834_301-134_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066835_301-135_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066836_301-139_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066837_301-140_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066838_301-141_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066839_301-144_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066840_301-145_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066841_301-146_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066842_301-147_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066843_301-151_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066844_301-152_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066845_301-153_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066846_301-154_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066847_301-155_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066848_301-158_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066849_301-161_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066850_301-162_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066852_206-002_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066853_206-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066854_206-008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066855_206-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066856_206-010_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066857_206-011_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066858_206-012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066859_206-013_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066860_206-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066861_206-020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066862_206-022_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066863_206-024_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066864_206-025_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066865_206-026_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066866_206-027_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066867_206-031_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066868_206-035_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066869_206-036_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066870_206-037_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066871_206-039_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066872_206-042_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066873_206-046_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066874_206-047_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066875_206-050_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066876_206-051_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066877_206-052_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066878_211-002_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066879_211-005_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066880_211-007_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066881_211-008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066882_211-011_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066883_211-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066884_211-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066885_211-020_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066886_211-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066887_211-022_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066888_211-025_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066889_211-026_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066890_211-030_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066891_211-034_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066892_211-035_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066893_211-036_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066894_212-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066895_212-002_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066896_212-005_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066897_212-007_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066898_212-010_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066899_212-011_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066900_212-012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066901_212-013_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066902_212-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066903_212-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066904_217-002_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066905_217-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066906_217-004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066907_217-008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066908_217-010_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066909_217-012_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066910_217-013_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066911_217-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066912_217-023_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066913_217-026_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066914_217-028_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066915_217-030_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066916_306-004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066917_306-005_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066918_306-008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066919_306-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066920_306-022_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066921_306-025_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066922_401-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066923_401-002_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066924_401-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066925_401-004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066926_401-005_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066927_401-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066928_401-010_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066929_401-011_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066930_401-013_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066931_401-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066932_401-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066933_401-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066934_401-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066935_401-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066936_401-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066937_401-022_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066938_206-053_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066939_206-057_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066940_206-058_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066941_206-065_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066942_206-067_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066943_206-068_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066944_206-071_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066945_301-002_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066946_301-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066947_301-004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066948_301-005_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066949_301-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066950_301-007_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066951_301-008_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066952_301-009_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066953_301-013_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066954_301-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066955_301-017_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066956_301-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066957_301-022_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066958_301-024_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066959_301-030_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066960_301-035_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066961_301-038_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066962_301-039_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066963_301-042_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066964_301-044_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066965_301-049_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066966_301-050_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066967_301-051_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066968_301-053_CHB.CEL"
+        ]
+    },
+    "pipeline": [
+        {
+            "name": "Input:DataLoader",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Train:TargetSketchEstimation",
+            "parameter": {
+                "scaling_factor" : 0
+            }
+        }
+      , {
+            "name": "Transform:QuantileNormalization",
+            "parameter": {
+                "scaling_factor" : 0
+            }
+        }
+      , {
+            "name": "Transform:AlleleSummarization",
+            "parameter": {
+                "probeset_list" : "/home/alex/Centrillion/CPT/unit_test/data/biallelic.ps"
+            }
+        }
+      , {
+            "name": "Train:Genotyping<Birdseed>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 300
+              , "convtol": 1e-5
+              , "trials" : 10
+              , "use_existing_model": false
+            }
+        }
+    ],
+    "pipeline_options": [
+        {
+            "name": "Train:TargetSketchEstimation",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 500
+            }
+        }
+      , {
+            "name": "Transform:ContrastCentersStretch",
+            "parameter": {
+                "k_scale" : 4
+            }
+        }
+      , {
+            "name": "Transform:MedianPolish",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Train:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Train:GenoTyping<Birdseed>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:GenoTyping<Birdseed>",
+            "parameter": {
+                "maxiter": 200
+              , "convtol": 0.00001
+            }
+        }
+      , {
+            "name": "Report:MAPlot",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 300
+            }
+        }
+    ]
+}

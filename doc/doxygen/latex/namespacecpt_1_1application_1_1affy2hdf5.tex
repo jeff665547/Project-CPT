@@ -1,0 +1,41 @@
+\hypertarget{namespacecpt_1_1application_1_1affy2hdf5}{\subsection{cpt\-:\-:application\-:\-:affy2hdf5 Namespace Reference}
+\label{namespacecpt_1_1application_1_1affy2hdf5}\index{cpt\-::application\-::affy2hdf5@{cpt\-::application\-::affy2hdf5}}
+}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacecpt_1_1application_1_1affy2hdf5_ab477d085c59f33cccea4a4313bcd5e58}{file\-\_\-convert\-\_\-to} (const std\-::string \&affycel, const std\-::string \&cenhdf5)
+\begin{DoxyCompactList}\small\item\em Affy C\-E\-L file to C\-E\-N hdf5 conversion procedure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{namespacecpt_1_1application_1_1affy2hdf5_ab477d085c59f33cccea4a4313bcd5e58}{\index{cpt\-::application\-::affy2hdf5@{cpt\-::application\-::affy2hdf5}!file\-\_\-convert\-\_\-to@{file\-\_\-convert\-\_\-to}}
+\index{file\-\_\-convert\-\_\-to@{file\-\_\-convert\-\_\-to}!cpt::application::affy2hdf5@{cpt\-::application\-::affy2hdf5}}
+\paragraph[{file\-\_\-convert\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}void cpt\-::application\-::affy2hdf5\-::file\-\_\-convert\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{affycel, }
+\item[{const std\-::string \&}]{cenhdf5}
+\end{DoxyParamCaption}
+)}}\label{namespacecpt_1_1application_1_1affy2hdf5_ab477d085c59f33cccea4a4313bcd5e58}
+
+
+Affy C\-E\-L file to C\-E\-N hdf5 conversion procedure. 
+
+Given the paths to the Affy C\-E\-L input file and C\-E\-N hdf5 output file and this function will convert the .cel file format to hdf5. 
+\begin{DoxyParams}{Parameters}
+{\em affycel} & The .cel file path \\
+\hline
+{\em cenhdf5} & The .cen file path 
+\begin{DoxyCodeInclude}
+    \hyperlink{namespacecpt_1_1application_1_1cenfile__builder_a2a8bcd0f47ababa94240e923be133a0d}{cpt::application::cenfile\_builder::build}(
+          example\_data\_dir + \textcolor{stringliteral}{"/hdf5\_schema\_example.json"}
+        , example\_out\_dir + \textcolor{stringliteral}{"/GSM2066668\_206-001\_CHB.CEN"}
+    );
+    \hyperlink{namespacecpt_1_1application_1_1affy2hdf5_ab477d085c59f33cccea4a4313bcd5e58}{cpt::application::affy2hdf5::file\_convert\_to}(
+          example\_data\_dir + \textcolor{stringliteral}{"/GSM2066668\_206-001\_CHB.CEL"}
+        , example\_out\_dir + \textcolor{stringliteral}{"/GSM2066668\_206-001\_CHB.CEN"}
+    );
+\end{DoxyCodeInclude}
+\\
+\hline
+\end{DoxyParams}

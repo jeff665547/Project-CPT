@@ -1,0 +1,150 @@
+{
+    "output_dir":
+        "/home/alex/Centrillion/CPT/unit_test/data/results/training_"
+    ,
+    "input": {
+        "chip_layout": [
+            "/home/alex/data/array/Axiom_GW_Hu-CHB_SNP_r2_1/Axiom_GW_Hu-CHB_SNP.r2.cdf"
+        ]
+      , "clustering_models": [
+            "/home/alex/Centrillion/CPT/unit_test/data/results/model.mdl"
+        ]
+      , "sample_files": [
+            "/home/alex/data/array/GSE78098/raw_data/GSM2066668_206-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066669_206-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066670_206-004_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066671_206-014_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066672_206-015_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066673_206-016_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066674_206-018_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066675_206-019_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066676_206-021_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066677_206-023_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066678_206-028_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066679_206-029_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066680_206-030_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066681_206-032_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066682_206-033_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066683_206-034_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066684_206-038_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066685_206-040_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066686_206-041_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066687_206-043_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066688_206-044_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066689_206-045_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066690_206-048_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066691_206-049_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066692_206-054_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066693_206-056_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066694_211-001_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066695_211-003_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066696_211-006_CHB.CEL"
+          , "/home/alex/data/array/GSE78098/raw_data/GSM2066697_211-009_CHB.CEL"
+        ]
+    },
+    "pipeline": [
+        {
+            "name": "Input:DataLoader",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Train:TargetSketchEstimation",
+            "parameter": {
+                "scaling_factor" : 0
+            }
+        }
+      , {
+            "name": "Transform:QuantileNormalization",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Transform:AlleleSummarization",
+            "parameter": {
+                "probeset_list" : "/home/alex/Centrillion/CPT/unit_test/data/test.ps"
+            }
+        }
+      , {
+            "name": "Train:Genotyping<Birdseed>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 300
+              , "convtol": 1e-5
+              , "trials" : 10
+              , "use_existing_model": false
+            }
+        }
+    ],
+    "pipeline_options": [
+        {
+            "name": "Train:TargetSketchEstimation",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 500
+            }
+        }
+      , {
+            "name": "Transform:ContrastCentersStretch",
+            "parameter": {
+                "k_scale" : 4
+            }
+        }
+      , {
+            "name": "Transform:MedianPolish",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Train:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:CopyNumberEstimation<Canary>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Train:GenoTyping<Birdseed>",
+            "parameter": {
+                "initial": "RANDOM"
+              , "maxiter": 200
+              , "convtol": 0.00001
+              , "trials" : 5
+            }
+        }
+      , {
+            "name": "Infer:GenoTyping<Birdseed>",
+            "parameter": {
+                "maxiter": 200
+              , "convtol": 0.00001
+            }
+        }
+      , {
+            "name": "Report:MAPlot",
+            "parameter": {
+            }
+        }
+      , {
+            "name": "Dummy:AlleleSummarization",
+            "parameter": {
+                "num_probesets": 1000
+              , "num_samples": 300
+            }
+        }
+    ]
+}

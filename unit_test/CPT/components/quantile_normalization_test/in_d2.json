@@ -1,0 +1,65 @@
+{
+    "context": {
+        "output_dir" : "/home/john/CPT/unit_test/components/data_loader_test/", 
+        "clustering_models": [
+            "/home/alex/Centrillion/CPT/unit_test/data/results/model.mdl"
+        ],
+        "sample_files" : [
+            "/home/alex/data/array/GSE78098/raw_data/GSM2066768_301-014_CHB.CEL", 
+            "/home/alex/data/array/GSE78098/raw_data/GSM2066769_301-016_CHB.CEL", 
+            "/home/alex/data/array/GSE78098/raw_data/GSM2066770_301-018_CHB.CEL"
+        ],
+        "chip_layout": "/home/alex/data/array/Axiom_GW_Hu-CHB_SNP_r2_1/Axiom_GW_Hu-CHB_SNP.r2.cdf"
+    },
+    "pipeline": [
+        {
+            "name": "Input:DataLoader",
+            "parameter": {}
+        },
+        {
+            "name": "Train:TargetSketchEstimation",
+            "parameter": {
+                "scaling_factor" : {
+                    "type" : "literal",
+                    "content" : 0,
+                    "comment" : "input"
+                },
+                "target_sketch_prefix" : {
+                    "type" : "literal",
+                    "content" : "/home/john/CPT/unit_test/components/quantile_normalization_test/tse_",
+                    "comment" : "input"
+                },
+                "target_sketch" : {
+                    "type" : "ref",
+                    "content" : "my_sketch",
+                    "comment" : "output"
+                }
+            }
+        },
+        {
+            "name": "Transform:QuantileNormalization",
+            "parameter": {
+                "target_sketch" : {
+                    "type" : "ref",
+                    "content" : "my_sketch",
+                    "comment" : "input"
+                },
+                "quantile_normalization_prefix" : {
+                    "type" : "literal",
+                    "content" : "/home/john/CPT/unit_test/components/quantile_normalization_test/qn_",
+                    "comment" : "input"
+                },
+                "is_tsv" : {
+                    "type" : "literal",
+                    "content" : "true",
+                    "comment" : "input"
+                },
+                "probeset_cube" : {
+                    "type" : "ref",
+                    "content" : "my_ps_cube",
+                    "comment" : "output"
+                }
+            }
+        }
+    ]
+}

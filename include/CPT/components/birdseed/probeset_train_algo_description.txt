@@ -1,0 +1,20 @@
+cands -> probeset random ids
+cube  -> probeset cube
+g_m_means -> candidate initial model
+random select probeset ids
+log transform get g_m_means
+for each g_m_means
+    model fitting
+    model angle sort
+    model scroing
+get best model
+model component mapping
+if model is 3 components 
+    generate a model imputation training task
+else 
+    generate a model imputation collect id task task
+
+run the model imputation related tasks
+
+for each model have missing cluster
+    model inference
