@@ -28,7 +28,7 @@ AxiomGT is an improved version of the [BRLMM-P algorithm](BRLMMp), incorporating
 
 Moreover, by leveraging the Bayesian framework, users can harness the power of priors to incorporate their experimental or biological knowledge. AxiomGT offers the flexibility for users to customize priors for each SNP, enabling the integration of prior information. Users can also utilize posteriors generated from other datasets as priors in a new analysis. Additionally, AxiomGT allows analysts to input correct genotype labels, facilitating supervised learning for better clustering models and performance. Furthermore, recognizing the impact of gender on sex chromosome copy number, and the variation in copy numbers across different chromosome categories, AxiomGT can take into consideration both genders and SNP categories at the same time.
 
-The primary output results of AxiomGT consist of two files. The first file contains genotyping results for all samples and SNPs, documenting the [MvA](#-minus-vs-average) transformed signals of the two channels, predicted genotype, corresponding posterior probability of the predicted genotype, probeset (SNP), and sample information. The second file provides the call rate of SNPs for each sample. The following figures visualize the genotyping results for selected probesets on the Banff chip. The solid ellipse represents the 95% confidence boundary of each given genotype cluster.
+The primary output results of AxiomGT consist of two files. The first file contains genotyping results for all samples and SNPs, documenting the [MvA](#-minus-vs-average) transformed signals of the two channels, predicted genotype, corresponding posterior probability of the predicted genotype, probeset (SNP), and sample information. The second file provides the call rate of SNPs for each sample. The following figures visualize the genotyping results for selected probesets on the Banff chip. The solid ellipse represents the 95% confidence boundary of each given genotype cluster, and "No Calls" indicate that the model lacks sufficient confidence to determine the genotypes of the provided data points.
 
 <img src="./uploads/AxiomGT/good_AX-167140793.png"  width="430" height="360"> 
 <img src="./uploads/AxiomGT/bad_AX-167153755.png"   width="435" height="360">
@@ -49,7 +49,7 @@ Prior to executing AxiomGT, it is essential to filter out poor-quality gene expr
 The figure below illustrates the workflow of constructing models from the expression profiles and the procedure of the genotype prediction.
 
 
-<img src="./uploads/AxiomGT/genotyping_procedure.png"   width="800" height="490">
+<img src="./uploads/AxiomGT/genotyping_procedure.png"   width="800" height="560">
 
 ### Data Transformation (Signal Space Transformation)
 #### * Minus vs. Average
@@ -1311,3 +1311,5 @@ Meaning of the value:The "Validate" parameter indicates whether the model can be
 
 
 * Evaluation Metric: Similarity between predicted genotype results and the reference info (e.g. Chromosome sequencing outcomes and genotyping results from other reliable sources).
+
+To conduct this analysis, please refer to [Compile from source](Compile-from-source) and [Run binaries](Run-binaries#run-birdseed-and-brlmmp) sections for detailed instructions and additional information.
