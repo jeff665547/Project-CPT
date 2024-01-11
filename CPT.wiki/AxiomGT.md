@@ -1306,8 +1306,8 @@ Meaning of the value:The "Validate" parameter indicates whether the model can be
 
 | Dataset   | Previous Method  | New Method      |
 |-----------|------------------|-----------------|
-| GSE78098  | 94.095% ([Birdseed](Birdseed))| 99.513% (AxiomGT)|
-| Dog Banff | 85.232% ([BRLMM-P](BRLMMp))| 90.572% (AxiomGT)|
+| GSE78098  | 94.095% | 99.513% (AxiomGT)|
+| Dog Banff | 85.232% | 90.572% (AxiomGT)|
 
 
 * Evaluation Metric: Similarity between predicted genotype results and the reference info (e.g. Chromosome sequencing outcomes and genotyping results from other reliable sources).
